@@ -22,6 +22,7 @@ namespace Autosaloon
             DataSet ds = new DataSet();
             da.Fill(ds);
             cmd.ExecuteNonQuery();
+
             con.Close();
 
             rjComboBox1.DataSource = ds.Tables[0];
@@ -34,17 +35,13 @@ namespace Autosaloon
             switch (rjComboBox1.SelectedIndex)
             {
                 case 0:
-                    rjComboBox2.Items.Clear();
-                    rjComboBox2.Items.Add("A1");
+                     
                     break;
 
                 case 1:
-                    rjComboBox2.Items.Clear();
-                    rjComboBox2.Items.Add("330i");
                     break;
 
                 default: 
-                    rjComboBox2.Items.Clear();
                     break;
             }
         }
