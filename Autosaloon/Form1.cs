@@ -7,7 +7,7 @@ namespace Autosaloon
 {
     public partial class Form1 : Form
     {
-        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;Initial Catalog=AutoDB;Integrated Security=True");
+        SqlConnection con = new SqlConnection(@"Data Source=.;Initial Catalog=AutosaloonDB;User ID=sa;Password=sa");
 
         public Form1()
         {
@@ -17,7 +17,7 @@ namespace Autosaloon
         {
             con.Open();
 
-            SqlCommand cmd = new SqlCommand("Select * from autoTable", con);
+            SqlCommand cmd = new SqlCommand("Select * from AutosaloonTable", con);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataSet ds = new DataSet();
             da.Fill(ds);

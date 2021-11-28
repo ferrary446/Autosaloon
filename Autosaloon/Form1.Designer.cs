@@ -134,8 +134,8 @@
             this.rjComboBox3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.rjComboBox3.ForeColor = System.Drawing.Color.DimGray;
             this.rjComboBox3.IconColor = System.Drawing.Color.Black;
-            this.rjComboBox3.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.rjComboBox3.ListTextColor = System.Drawing.Color.DimGray;
+            this.rjComboBox3.ListBackColor = System.Drawing.Color.DarkSlateBlue;
+            this.rjComboBox3.ListTextColor = System.Drawing.Color.WhiteSmoke;
             this.rjComboBox3.Location = new System.Drawing.Point(292, 107);
             this.rjComboBox3.MinimumSize = new System.Drawing.Size(200, 30);
             this.rjComboBox3.Name = "rjComboBox3";
@@ -166,8 +166,8 @@
             this.rjComboBox4.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.rjComboBox4.ForeColor = System.Drawing.Color.DimGray;
             this.rjComboBox4.IconColor = System.Drawing.Color.Black;
-            this.rjComboBox4.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.rjComboBox4.ListTextColor = System.Drawing.Color.DimGray;
+            this.rjComboBox4.ListBackColor = System.Drawing.Color.DarkSlateBlue;
+            this.rjComboBox4.ListTextColor = System.Drawing.Color.WhiteSmoke;
             this.rjComboBox4.Location = new System.Drawing.Point(292, 161);
             this.rjComboBox4.MinimumSize = new System.Drawing.Size(200, 30);
             this.rjComboBox4.Name = "rjComboBox4";
