@@ -7,7 +7,7 @@ namespace Autosaloon
 {
     public partial class Form1 : Form
     {
-        SqlConnection con = new SqlConnection(@"Data Source=.;Initial Catalog=AutosaloonDB;User ID=sa;Password=sa");
+        SqlConnection connection = new SqlConnection(@"Data Source=.;Initial Catalog=AutosaloonDB;User ID=sa;Password=sa");
 
         public Form1()
         {
@@ -15,17 +15,17 @@ namespace Autosaloon
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-            con.Open();
+            connection.Open();
 
-            SqlCommand cmd = new SqlCommand("Select * from AutosaloonTable", con);
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            DataSet ds = new DataSet();
-            da.Fill(ds);
-            cmd.ExecuteNonQuery();
+            SqlCommand command = new SqlCommand("Select * from AutosaloonTable", connection);
+            SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
+            DataSet dataSet = new DataSet();
+            dataAdapter.Fill(dataSet);
+            command.ExecuteNonQuery();
 
-            con.Close();
+            connection.Close();
 
-            rjComboBox1.DataSource = ds.Tables[0];
+            rjComboBox1.DataSource = dataSet.Tables[0];
             rjComboBox1.DisplayMember = "AutoBrand";
             rjComboBox1.ValueMember = "AutoID";
         }
