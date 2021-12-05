@@ -77,7 +77,6 @@
             this.rjComboBox1.Size = new System.Drawing.Size(251, 54);
             this.rjComboBox1.TabIndex = 1;
             this.rjComboBox1.Texts = "";
-            this.rjComboBox1.OnSelectedIndexChanged += new System.EventHandler(this.RjComboBox1_OnSelectedIndexChanged);
             // 
             // label1
             // 

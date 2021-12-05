@@ -13,7 +13,8 @@ namespace Autosaloon
         {
             InitializeComponent();
         }
-        private void Form1_Load(object sender, EventArgs e)
+
+        private DataSet GetDataSetFromQuery()
         {
             connection.Open();
 
@@ -25,25 +26,18 @@ namespace Autosaloon
 
             connection.Close();
 
-            rjComboBox1.DataSource = dataSet.Tables[0];
-            rjComboBox1.DisplayMember = "AutoBrand";
-            rjComboBox1.ValueMember = "AutoID";
+            return dataSet;
         }
-
-        private void RjComboBox1_OnSelectedIndexChanged(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e)
         {
-            switch (rjComboBox1.SelectedIndex)
+            foreach (DataTable dataTable in GetDataSetFromQuery().Tables)
             {
-                case 0:
-                     
-                    break;
-
-                case 1:
-                    break;
-
-                default: 
-                    break;
+                rjComboBox1.DataSource = dataTable;
+                rjComboBox1.DisplayMember = "AutoBrand";
+                rjComboBox1.ValueMember = "AutoID";
             }
+
+            
         }
     }
 }
