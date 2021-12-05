@@ -228,7 +228,6 @@
             this.Name = "AutoSearcher";
             this.Text = "Autosaloon";
             this.TransparencyKey = System.Drawing.Color.DarkOliveGreen;
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

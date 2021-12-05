@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.rjButton1 = new CustomBox.RJControls.RJButton();
-            this.rjButton2 = new CustomBox.RJControls.RJButton();
-            this.rjTextBox1 = new CustomBox.RJControls.RJTextBox();
-            this.rjTextBox2 = new CustomBox.RJControls.RJTextBox();
+            this.clearButton = new CustomBox.RJControls.RJButton();
+            this.userIDTextBox = new CustomBox.RJControls.RJTextBox();
+            this.passwordTextBox = new CustomBox.RJControls.RJTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -59,68 +59,69 @@
             this.rjButton1.TextColor = System.Drawing.Color.Black;
             this.rjButton1.UseVisualStyleBackColor = false;
             // 
-            // rjButton2
+            // clearButton
             // 
-            this.rjButton2.BackColor = System.Drawing.Color.Gold;
-            this.rjButton2.BackgroundColor = System.Drawing.Color.Gold;
-            this.rjButton2.BorderColor = System.Drawing.Color.Black;
-            this.rjButton2.BorderRadius = 20;
-            this.rjButton2.BorderSize = 1;
-            this.rjButton2.FlatAppearance.BorderSize = 0;
-            this.rjButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton2.Font = new System.Drawing.Font("Impact", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.rjButton2.ForeColor = System.Drawing.Color.Black;
-            this.rjButton2.Location = new System.Drawing.Point(719, 474);
-            this.rjButton2.Name = "rjButton2";
-            this.rjButton2.Size = new System.Drawing.Size(143, 37);
-            this.rjButton2.TabIndex = 1;
-            this.rjButton2.Text = "Clear";
-            this.rjButton2.TextColor = System.Drawing.Color.Black;
-            this.rjButton2.UseVisualStyleBackColor = false;
+            this.clearButton.BackColor = System.Drawing.Color.Gold;
+            this.clearButton.BackgroundColor = System.Drawing.Color.Gold;
+            this.clearButton.BorderColor = System.Drawing.Color.Black;
+            this.clearButton.BorderRadius = 20;
+            this.clearButton.BorderSize = 1;
+            this.clearButton.FlatAppearance.BorderSize = 0;
+            this.clearButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.clearButton.Font = new System.Drawing.Font("Impact", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.clearButton.ForeColor = System.Drawing.Color.Black;
+            this.clearButton.Location = new System.Drawing.Point(719, 474);
+            this.clearButton.Name = "clearButton";
+            this.clearButton.Size = new System.Drawing.Size(143, 37);
+            this.clearButton.TabIndex = 1;
+            this.clearButton.Text = "Clear";
+            this.clearButton.TextColor = System.Drawing.Color.Black;
+            this.clearButton.UseVisualStyleBackColor = false;
+            this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
             // 
-            // rjTextBox1
+            // userIDTextBox
             // 
-            this.rjTextBox1.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.rjTextBox1.BorderColor = System.Drawing.Color.Gold;
-            this.rjTextBox1.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.rjTextBox1.BorderRadius = 0;
-            this.rjTextBox1.BorderSize = 2;
-            this.rjTextBox1.Font = new System.Drawing.Font("Impact", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.rjTextBox1.ForeColor = System.Drawing.Color.White;
-            this.rjTextBox1.Location = new System.Drawing.Point(550, 139);
-            this.rjTextBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox1.Multiline = false;
-            this.rjTextBox1.Name = "rjTextBox1";
-            this.rjTextBox1.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox1.PasswordChar = false;
-            this.rjTextBox1.PlaceholderColor = System.Drawing.Color.White;
-            this.rjTextBox1.PlaceholderText = "";
-            this.rjTextBox1.Size = new System.Drawing.Size(312, 36);
-            this.rjTextBox1.TabIndex = 2;
-            this.rjTextBox1.Texts = "";
-            this.rjTextBox1.UnderlinedStyle = true;
+            this.userIDTextBox.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.userIDTextBox.BorderColor = System.Drawing.Color.Gold;
+            this.userIDTextBox.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.userIDTextBox.BorderRadius = 0;
+            this.userIDTextBox.BorderSize = 2;
+            this.userIDTextBox.Font = new System.Drawing.Font("Impact", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.userIDTextBox.ForeColor = System.Drawing.Color.White;
+            this.userIDTextBox.Location = new System.Drawing.Point(550, 139);
+            this.userIDTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.userIDTextBox.Multiline = false;
+            this.userIDTextBox.Name = "userIDTextBox";
+            this.userIDTextBox.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.userIDTextBox.PasswordChar = false;
+            this.userIDTextBox.PlaceholderColor = System.Drawing.Color.White;
+            this.userIDTextBox.PlaceholderText = "";
+            this.userIDTextBox.Size = new System.Drawing.Size(312, 36);
+            this.userIDTextBox.TabIndex = 2;
+            this.userIDTextBox.Texts = "";
+            this.userIDTextBox.UnderlinedStyle = true;
             // 
-            // rjTextBox2
+            // passwordTextBox
             // 
-            this.rjTextBox2.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.rjTextBox2.BorderColor = System.Drawing.Color.Gold;
-            this.rjTextBox2.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.rjTextBox2.BorderRadius = 0;
-            this.rjTextBox2.BorderSize = 2;
-            this.rjTextBox2.Font = new System.Drawing.Font("Impact", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.rjTextBox2.ForeColor = System.Drawing.Color.White;
-            this.rjTextBox2.Location = new System.Drawing.Point(550, 222);
-            this.rjTextBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox2.Multiline = false;
-            this.rjTextBox2.Name = "rjTextBox2";
-            this.rjTextBox2.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox2.PasswordChar = false;
-            this.rjTextBox2.PlaceholderColor = System.Drawing.Color.White;
-            this.rjTextBox2.PlaceholderText = "";
-            this.rjTextBox2.Size = new System.Drawing.Size(312, 36);
-            this.rjTextBox2.TabIndex = 2;
-            this.rjTextBox2.Texts = "";
-            this.rjTextBox2.UnderlinedStyle = true;
+            this.passwordTextBox.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.passwordTextBox.BorderColor = System.Drawing.Color.Gold;
+            this.passwordTextBox.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.passwordTextBox.BorderRadius = 0;
+            this.passwordTextBox.BorderSize = 2;
+            this.passwordTextBox.Font = new System.Drawing.Font("Impact", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.passwordTextBox.ForeColor = System.Drawing.Color.White;
+            this.passwordTextBox.Location = new System.Drawing.Point(550, 222);
+            this.passwordTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.passwordTextBox.Multiline = false;
+            this.passwordTextBox.Name = "passwordTextBox";
+            this.passwordTextBox.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.passwordTextBox.PasswordChar = false;
+            this.passwordTextBox.PlaceholderColor = System.Drawing.Color.White;
+            this.passwordTextBox.PlaceholderText = "";
+            this.passwordTextBox.Size = new System.Drawing.Size(312, 36);
+            this.passwordTextBox.TabIndex = 2;
+            this.passwordTextBox.Texts = "";
+            this.passwordTextBox.UnderlinedStyle = true;
             // 
             // label1
             // 
@@ -191,9 +192,9 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.rjTextBox2);
-            this.Controls.Add(this.rjTextBox1);
-            this.Controls.Add(this.rjButton2);
+            this.Controls.Add(this.passwordTextBox);
+            this.Controls.Add(this.userIDTextBox);
+            this.Controls.Add(this.clearButton);
             this.Controls.Add(this.rjButton1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Login";
@@ -208,9 +209,9 @@
         #endregion
 
         private CustomBox.RJControls.RJButton rjButton1;
-        private CustomBox.RJControls.RJButton rjButton2;
-        private CustomBox.RJControls.RJTextBox rjTextBox1;
-        private CustomBox.RJControls.RJTextBox rjTextBox2;
+        private CustomBox.RJControls.RJButton clearButton;
+        private CustomBox.RJControls.RJTextBox userIDTextBox;
+        private CustomBox.RJControls.RJTextBox passwordTextBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
