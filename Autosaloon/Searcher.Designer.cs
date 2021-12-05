@@ -226,8 +226,10 @@
             this.Font = new System.Drawing.Font("Century", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "AutoSearcher";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Autosaloon";
             this.TransparencyKey = System.Drawing.Color.DarkOliveGreen;
+            this.Load += new System.EventHandler(this.AutoSearcher_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

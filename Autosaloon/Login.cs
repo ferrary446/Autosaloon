@@ -8,35 +8,48 @@ namespace Autosaloon
     public partial class Login : Form
     {
 
-        const string userID = "sa";
-        const string password = "sa";
+        private const string userID = "sa";
+        private const string password = "sa";
 
         public Login()
         {
             InitializeComponent();
         }
 
-        SqlConnection connection = new SqlConnection($"Data Source=.;Initial Catalog=AutosaloonDB;User ID={userID};Password={password}");
-
-        private DataSet GetDataSetFromQuery()
+        private void LoginChecked()
         {
-            connection.Open();
-
-            SqlCommand command = new SqlCommand("Select * from AutosaloonTable", connection);
-            SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
-            DataSet dataSet = new DataSet();
-            dataAdapter.Fill(dataSet);
-            command.ExecuteNonQuery();
-
-            connection.Close();
-
-            return dataSet;
+            if (userIDTextBox.Texts != "" && passwordTextBox.Texts != "")
+            {
+                if (userIDTextBox.Texts != userID || passwordTextBox.Texts != password)
+                {
+                    MessageBox.Show("Login or password is wrong!");
+                }
+                else
+                {
+                    AutoSearcher searcher = new AutoSearcher();
+                    searcher.Show();
+                    Hide();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please enter user and password!");
+            }
         }
-
         private void clearButton_Click(object sender, EventArgs e)
         {
             userIDTextBox.Texts = "";
             passwordTextBox.Texts = "";
+        }
+
+        private void signInButton_Click(object sender, EventArgs e)
+        {
+            LoginChecked();
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+            passwordTextBox.PasswordChar = true;
         }
     }
 }

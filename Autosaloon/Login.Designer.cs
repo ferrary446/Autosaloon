@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.rjButton1 = new CustomBox.RJControls.RJButton();
+            this.signInButton = new CustomBox.RJControls.RJButton();
             this.clearButton = new CustomBox.RJControls.RJButton();
             this.userIDTextBox = new CustomBox.RJControls.RJTextBox();
             this.passwordTextBox = new CustomBox.RJControls.RJTextBox();
@@ -40,24 +40,25 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // rjButton1
+            // signInButton
             // 
-            this.rjButton1.BackColor = System.Drawing.Color.Gold;
-            this.rjButton1.BackgroundColor = System.Drawing.Color.Gold;
-            this.rjButton1.BorderColor = System.Drawing.Color.Black;
-            this.rjButton1.BorderRadius = 20;
-            this.rjButton1.BorderSize = 1;
-            this.rjButton1.FlatAppearance.BorderSize = 0;
-            this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton1.Font = new System.Drawing.Font("Impact", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.rjButton1.ForeColor = System.Drawing.Color.Black;
-            this.rjButton1.Location = new System.Drawing.Point(550, 474);
-            this.rjButton1.Name = "rjButton1";
-            this.rjButton1.Size = new System.Drawing.Size(143, 37);
-            this.rjButton1.TabIndex = 0;
-            this.rjButton1.Text = "Sign In";
-            this.rjButton1.TextColor = System.Drawing.Color.Black;
-            this.rjButton1.UseVisualStyleBackColor = false;
+            this.signInButton.BackColor = System.Drawing.Color.Gold;
+            this.signInButton.BackgroundColor = System.Drawing.Color.Gold;
+            this.signInButton.BorderColor = System.Drawing.Color.Black;
+            this.signInButton.BorderRadius = 20;
+            this.signInButton.BorderSize = 1;
+            this.signInButton.FlatAppearance.BorderSize = 0;
+            this.signInButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.signInButton.Font = new System.Drawing.Font("Impact", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.signInButton.ForeColor = System.Drawing.Color.Black;
+            this.signInButton.Location = new System.Drawing.Point(550, 474);
+            this.signInButton.Name = "signInButton";
+            this.signInButton.Size = new System.Drawing.Size(143, 37);
+            this.signInButton.TabIndex = 0;
+            this.signInButton.Text = "Sign In";
+            this.signInButton.TextColor = System.Drawing.Color.Black;
+            this.signInButton.UseVisualStyleBackColor = false;
+            this.signInButton.Click += new System.EventHandler(this.signInButton_Click);
             // 
             // clearButton
             // 
@@ -195,11 +196,12 @@
             this.Controls.Add(this.passwordTextBox);
             this.Controls.Add(this.userIDTextBox);
             this.Controls.Add(this.clearButton);
-            this.Controls.Add(this.rjButton1);
+            this.Controls.Add(this.signInButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -208,7 +210,7 @@
 
         #endregion
 
-        private CustomBox.RJControls.RJButton rjButton1;
+        private CustomBox.RJControls.RJButton signInButton;
         private CustomBox.RJControls.RJButton clearButton;
         private CustomBox.RJControls.RJTextBox userIDTextBox;
         private CustomBox.RJControls.RJTextBox passwordTextBox;
