@@ -1,6 +1,6 @@
 ﻿namespace Autosaloon
 {
-    partial class Form1
+    partial class AutoSearcher
     {
         /// <summary>
         ///  Required designer variable.
@@ -207,7 +207,7 @@
             this.rjProgressBar1.SymbolBefore = "";
             this.rjProgressBar1.TabIndex = 3;
             // 
-            // Form1
+            // AutoSearcher
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -225,7 +225,7 @@
             this.Controls.Add(this.rjButton1);
             this.Font = new System.Drawing.Font("Century", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.Name = "Form1";
+            this.Name = "AutoSearcher";
             this.Text = "Autosaloon";
             this.TransparencyKey = System.Drawing.Color.DarkOliveGreen;
             this.Load += new System.EventHandler(this.Form1_Load);

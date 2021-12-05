@@ -5,11 +5,10 @@ using System.Windows.Forms;
 
 namespace Autosaloon
 {
-    public partial class Form1 : Form
+    public partial class AutoSearcher : Form
     {
-        SqlConnection connection = new SqlConnection(@"Data Source=.;Initial Catalog=AutosaloonDB;User ID=sa;Password=sa");
 
-        public Form1()
+        public AutoSearcher()
         {
             InitializeComponent();
         }

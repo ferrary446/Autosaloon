@@ -80,47 +80,47 @@
             // 
             // rjTextBox1
             // 
-            this.rjTextBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.rjTextBox1.BorderColor = System.Drawing.Color.Black;
+            this.rjTextBox1.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.rjTextBox1.BorderColor = System.Drawing.Color.Gold;
             this.rjTextBox1.BorderFocusColor = System.Drawing.Color.HotPink;
             this.rjTextBox1.BorderRadius = 0;
             this.rjTextBox1.BorderSize = 2;
-            this.rjTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.rjTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.rjTextBox1.Font = new System.Drawing.Font("Impact", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.rjTextBox1.ForeColor = System.Drawing.Color.White;
             this.rjTextBox1.Location = new System.Drawing.Point(550, 139);
             this.rjTextBox1.Margin = new System.Windows.Forms.Padding(4);
             this.rjTextBox1.Multiline = false;
             this.rjTextBox1.Name = "rjTextBox1";
             this.rjTextBox1.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.rjTextBox1.PasswordChar = false;
-            this.rjTextBox1.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.rjTextBox1.PlaceholderColor = System.Drawing.Color.White;
             this.rjTextBox1.PlaceholderText = "";
-            this.rjTextBox1.Size = new System.Drawing.Size(312, 35);
+            this.rjTextBox1.Size = new System.Drawing.Size(312, 36);
             this.rjTextBox1.TabIndex = 2;
             this.rjTextBox1.Texts = "";
-            this.rjTextBox1.UnderlinedStyle = false;
+            this.rjTextBox1.UnderlinedStyle = true;
             // 
             // rjTextBox2
             // 
-            this.rjTextBox2.BackColor = System.Drawing.SystemColors.Window;
-            this.rjTextBox2.BorderColor = System.Drawing.Color.Black;
+            this.rjTextBox2.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.rjTextBox2.BorderColor = System.Drawing.Color.Gold;
             this.rjTextBox2.BorderFocusColor = System.Drawing.Color.HotPink;
             this.rjTextBox2.BorderRadius = 0;
             this.rjTextBox2.BorderSize = 2;
-            this.rjTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.rjTextBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.rjTextBox2.Font = new System.Drawing.Font("Impact", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.rjTextBox2.ForeColor = System.Drawing.Color.White;
             this.rjTextBox2.Location = new System.Drawing.Point(550, 222);
             this.rjTextBox2.Margin = new System.Windows.Forms.Padding(4);
             this.rjTextBox2.Multiline = false;
             this.rjTextBox2.Name = "rjTextBox2";
             this.rjTextBox2.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.rjTextBox2.PasswordChar = false;
-            this.rjTextBox2.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.rjTextBox2.PlaceholderColor = System.Drawing.Color.White;
             this.rjTextBox2.PlaceholderText = "";
-            this.rjTextBox2.Size = new System.Drawing.Size(312, 35);
+            this.rjTextBox2.Size = new System.Drawing.Size(312, 36);
             this.rjTextBox2.TabIndex = 2;
             this.rjTextBox2.Texts = "";
-            this.rjTextBox2.UnderlinedStyle = false;
+            this.rjTextBox2.UnderlinedStyle = true;
             // 
             // label1
             // 
@@ -162,7 +162,7 @@
             this.pictureBox1.Image = global::Autosaloon.Properties.Resources.dealership_icon_21;
             this.pictureBox1.Location = new System.Drawing.Point(0, -2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(402, 355);
+            this.pictureBox1.Size = new System.Drawing.Size(399, 355);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
@@ -176,7 +176,7 @@
             this.label4.Location = new System.Drawing.Point(0, 353);
             this.label4.Name = "label4";
             this.label4.Padding = new System.Windows.Forms.Padding(90);
-            this.label4.Size = new System.Drawing.Size(402, 234);
+            this.label4.Size = new System.Drawing.Size(399, 233);
             this.label4.TabIndex = 3;
             this.label4.Text = "Auto House";
             // 
@@ -195,7 +195,9 @@
             this.Controls.Add(this.rjTextBox1);
             this.Controls.Add(this.rjButton2);
             this.Controls.Add(this.rjButton1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
