@@ -39,5 +39,17 @@ namespace Autosaloon
             rjComboBox1.DisplayMember = "AutoBrand";
             rjComboBox1.ValueMember = "AutoID";
         }
+
+        private void BackToLoginButton_Click(object sender, EventArgs e)
+        {
+            LoginMethodsScreen loginMethodsScreen = new LoginMethodsScreen();
+            loginMethodsScreen.Show();
+            Hide();
+        }
+
+        private void CloseButtonInSearcher_Click(object sender, EventArgs e)
+        {
+            Hide();
+        }
     }
 }

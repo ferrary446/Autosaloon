@@ -1,6 +1,6 @@
 ﻿namespace Autosaloon
 {
-    partial class Login
+    partial class LoginScreen
     {
         /// <summary>
         /// Required designer variable.
@@ -51,9 +51,10 @@
             this.signInButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.signInButton.Font = new System.Drawing.Font("Impact", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.signInButton.ForeColor = System.Drawing.Color.Black;
-            this.signInButton.Location = new System.Drawing.Point(550, 474);
+            this.signInButton.Location = new System.Drawing.Point(481, 356);
+            this.signInButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.signInButton.Name = "signInButton";
-            this.signInButton.Size = new System.Drawing.Size(143, 37);
+            this.signInButton.Size = new System.Drawing.Size(125, 28);
             this.signInButton.TabIndex = 0;
             this.signInButton.Text = "Sign In";
             this.signInButton.TextColor = System.Drawing.Color.Black;
@@ -71,9 +72,10 @@
             this.clearButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.clearButton.Font = new System.Drawing.Font("Impact", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.clearButton.ForeColor = System.Drawing.Color.Black;
-            this.clearButton.Location = new System.Drawing.Point(719, 474);
+            this.clearButton.Location = new System.Drawing.Point(629, 356);
+            this.clearButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.clearButton.Name = "clearButton";
-            this.clearButton.Size = new System.Drawing.Size(143, 37);
+            this.clearButton.Size = new System.Drawing.Size(125, 28);
             this.clearButton.TabIndex = 1;
             this.clearButton.Text = "Clear";
             this.clearButton.TextColor = System.Drawing.Color.Black;
@@ -89,15 +91,15 @@
             this.userIDTextBox.BorderSize = 2;
             this.userIDTextBox.Font = new System.Drawing.Font("Impact", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.userIDTextBox.ForeColor = System.Drawing.Color.White;
-            this.userIDTextBox.Location = new System.Drawing.Point(550, 139);
-            this.userIDTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.userIDTextBox.Location = new System.Drawing.Point(481, 104);
+            this.userIDTextBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.userIDTextBox.Multiline = false;
             this.userIDTextBox.Name = "userIDTextBox";
-            this.userIDTextBox.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.userIDTextBox.Padding = new System.Windows.Forms.Padding(9, 5, 9, 5);
             this.userIDTextBox.PasswordChar = false;
             this.userIDTextBox.PlaceholderColor = System.Drawing.Color.White;
             this.userIDTextBox.PlaceholderText = "";
-            this.userIDTextBox.Size = new System.Drawing.Size(312, 36);
+            this.userIDTextBox.Size = new System.Drawing.Size(273, 29);
             this.userIDTextBox.TabIndex = 2;
             this.userIDTextBox.Texts = "";
             this.userIDTextBox.UnderlinedStyle = true;
@@ -111,15 +113,15 @@
             this.passwordTextBox.BorderSize = 2;
             this.passwordTextBox.Font = new System.Drawing.Font("Impact", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.passwordTextBox.ForeColor = System.Drawing.Color.White;
-            this.passwordTextBox.Location = new System.Drawing.Point(550, 222);
-            this.passwordTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.passwordTextBox.Location = new System.Drawing.Point(481, 166);
+            this.passwordTextBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.passwordTextBox.Multiline = false;
             this.passwordTextBox.Name = "passwordTextBox";
-            this.passwordTextBox.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.passwordTextBox.Padding = new System.Windows.Forms.Padding(9, 5, 9, 5);
             this.passwordTextBox.PasswordChar = false;
             this.passwordTextBox.PlaceholderColor = System.Drawing.Color.White;
             this.passwordTextBox.PlaceholderText = "";
-            this.passwordTextBox.Size = new System.Drawing.Size(312, 36);
+            this.passwordTextBox.Size = new System.Drawing.Size(273, 29);
             this.passwordTextBox.TabIndex = 2;
             this.passwordTextBox.Texts = "";
             this.passwordTextBox.UnderlinedStyle = true;
@@ -129,9 +131,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Impact", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(550, 72);
+            this.label1.Location = new System.Drawing.Point(481, 54);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(264, 28);
+            this.label1.Size = new System.Drawing.Size(219, 23);
             this.label1.TabIndex = 3;
             this.label1.Text = "Please login to application";
             // 
@@ -140,9 +142,9 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Impact", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(435, 139);
+            this.label2.Location = new System.Drawing.Point(381, 104);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(76, 28);
+            this.label2.Size = new System.Drawing.Size(62, 23);
             this.label2.TabIndex = 3;
             this.label2.Text = "UserID";
             // 
@@ -151,9 +153,9 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Impact", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(435, 222);
+            this.label3.Location = new System.Drawing.Point(381, 166);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(105, 28);
+            this.label3.Size = new System.Drawing.Size(88, 23);
             this.label3.TabIndex = 3;
             this.label3.Text = "Password";
             // 
@@ -163,8 +165,9 @@
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox1.Image = global::Autosaloon.Properties.Resources.dealership_icon_21;
             this.pictureBox1.Location = new System.Drawing.Point(0, -2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(399, 355);
+            this.pictureBox1.Size = new System.Drawing.Size(349, 266);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
@@ -175,19 +178,19 @@
             this.label4.BackColor = System.Drawing.Color.Gold;
             this.label4.Font = new System.Drawing.Font("Impact", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(0, 353);
+            this.label4.Location = new System.Drawing.Point(0, 264);
             this.label4.Name = "label4";
-            this.label4.Padding = new System.Windows.Forms.Padding(90);
-            this.label4.Size = new System.Drawing.Size(399, 233);
+            this.label4.Padding = new System.Windows.Forms.Padding(92, 70, 79, 68);
+            this.label4.Size = new System.Drawing.Size(349, 181);
             this.label4.TabIndex = 3;
             this.label4.Text = "Auto House";
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.ClientSize = new System.Drawing.Size(962, 587);
+            this.ClientSize = new System.Drawing.Size(855, 445);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -198,6 +201,7 @@
             this.Controls.Add(this.clearButton);
             this.Controls.Add(this.signInButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";

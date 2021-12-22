@@ -38,6 +38,11 @@
             this.rjComboBox4 = new CustomBox.RJControls.RJComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.rjProgressBar1 = new CustomBox.RJControls.RJProgressBar();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.backToLoginButton = new CustomBox.RJControls.RJButton();
+            this.closeButtonInSearcher = new CustomBox.RJControls.RJButton();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // rjButton1
@@ -51,7 +56,7 @@
             this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton1.Font = new System.Drawing.Font("Impact", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.rjButton1.ForeColor = System.Drawing.Color.Black;
-            this.rjButton1.Location = new System.Drawing.Point(201, 328);
+            this.rjButton1.Location = new System.Drawing.Point(366, 358);
             this.rjButton1.Name = "rjButton1";
             this.rjButton1.Size = new System.Drawing.Size(143, 37);
             this.rjButton1.TabIndex = 0;
@@ -70,7 +75,7 @@
             this.rjComboBox1.IconColor = System.Drawing.Color.Black;
             this.rjComboBox1.ListBackColor = System.Drawing.Color.DarkSlateBlue;
             this.rjComboBox1.ListTextColor = System.Drawing.Color.WhiteSmoke;
-            this.rjComboBox1.Location = new System.Drawing.Point(292, -1);
+            this.rjComboBox1.Location = new System.Drawing.Point(622, -6);
             this.rjComboBox1.MinimumSize = new System.Drawing.Size(200, 30);
             this.rjComboBox1.Name = "rjComboBox1";
             this.rjComboBox1.Padding = new System.Windows.Forms.Padding(1);
@@ -84,10 +89,10 @@
             this.label1.BackColor = System.Drawing.Color.Gold;
             this.label1.Font = new System.Drawing.Font("Impact", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(-2, -1);
+            this.label1.Location = new System.Drawing.Point(366, -1);
             this.label1.Name = "label1";
             this.label1.Padding = new System.Windows.Forms.Padding(13);
-            this.label1.Size = new System.Drawing.Size(307, 54);
+            this.label1.Size = new System.Drawing.Size(259, 49);
             this.label1.TabIndex = 2;
             this.label1.Text = "Please choose the car brand";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -103,7 +108,7 @@
             this.rjComboBox2.IconColor = System.Drawing.Color.Black;
             this.rjComboBox2.ListBackColor = System.Drawing.Color.DarkSlateBlue;
             this.rjComboBox2.ListTextColor = System.Drawing.Color.WhiteSmoke;
-            this.rjComboBox2.Location = new System.Drawing.Point(292, 53);
+            this.rjComboBox2.Location = new System.Drawing.Point(622, 43);
             this.rjComboBox2.MinimumSize = new System.Drawing.Size(200, 30);
             this.rjComboBox2.Name = "rjComboBox2";
             this.rjComboBox2.Padding = new System.Windows.Forms.Padding(1);
@@ -116,7 +121,7 @@
             this.label2.BackColor = System.Drawing.Color.Gold;
             this.label2.Font = new System.Drawing.Font("Impact", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(-2, 161);
+            this.label2.Location = new System.Drawing.Point(366, 144);
             this.label2.Name = "label2";
             this.label2.Padding = new System.Windows.Forms.Padding(13);
             this.label2.Size = new System.Drawing.Size(295, 54);
@@ -135,7 +140,7 @@
             this.rjComboBox3.IconColor = System.Drawing.Color.Black;
             this.rjComboBox3.ListBackColor = System.Drawing.Color.DarkSlateBlue;
             this.rjComboBox3.ListTextColor = System.Drawing.Color.WhiteSmoke;
-            this.rjComboBox3.Location = new System.Drawing.Point(292, 107);
+            this.rjComboBox3.Location = new System.Drawing.Point(622, 93);
             this.rjComboBox3.MinimumSize = new System.Drawing.Size(200, 30);
             this.rjComboBox3.Name = "rjComboBox3";
             this.rjComboBox3.Padding = new System.Windows.Forms.Padding(1);
@@ -148,7 +153,7 @@
             this.label3.BackColor = System.Drawing.Color.Gold;
             this.label3.Font = new System.Drawing.Font("Impact", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(-2, 53);
+            this.label3.Location = new System.Drawing.Point(366, 43);
             this.label3.Name = "label3";
             this.label3.Padding = new System.Windows.Forms.Padding(13);
             this.label3.Size = new System.Drawing.Size(307, 54);
@@ -167,7 +172,7 @@
             this.rjComboBox4.IconColor = System.Drawing.Color.Black;
             this.rjComboBox4.ListBackColor = System.Drawing.Color.DarkSlateBlue;
             this.rjComboBox4.ListTextColor = System.Drawing.Color.WhiteSmoke;
-            this.rjComboBox4.Location = new System.Drawing.Point(292, 161);
+            this.rjComboBox4.Location = new System.Drawing.Point(622, 144);
             this.rjComboBox4.MinimumSize = new System.Drawing.Size(200, 30);
             this.rjComboBox4.Name = "rjComboBox4";
             this.rjComboBox4.Padding = new System.Windows.Forms.Padding(1);
@@ -180,7 +185,7 @@
             this.label4.BackColor = System.Drawing.Color.Gold;
             this.label4.Font = new System.Drawing.Font("Impact", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(-2, 107);
+            this.label4.Location = new System.Drawing.Point(366, 93);
             this.label4.Name = "label4";
             this.label4.Padding = new System.Windows.Forms.Padding(13);
             this.label4.Size = new System.Drawing.Size(295, 54);
@@ -196,23 +201,93 @@
             this.rjProgressBar1.Font = new System.Drawing.Font("Impact", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.rjProgressBar1.ForeBackColor = System.Drawing.Color.Gold;
             this.rjProgressBar1.ForeColor = System.Drawing.Color.Black;
-            this.rjProgressBar1.Location = new System.Drawing.Point(-2, 249);
+            this.rjProgressBar1.Location = new System.Drawing.Point(347, 249);
             this.rjProgressBar1.Name = "rjProgressBar1";
             this.rjProgressBar1.ShowMaximun = false;
             this.rjProgressBar1.ShowValue = CustomBox.RJControls.TextPosition.Right;
-            this.rjProgressBar1.Size = new System.Drawing.Size(545, 32);
+            this.rjProgressBar1.Size = new System.Drawing.Size(526, 32);
             this.rjProgressBar1.SliderColor = System.Drawing.Color.RoyalBlue;
             this.rjProgressBar1.SliderHeight = 6;
             this.rjProgressBar1.SymbolAfter = "";
             this.rjProgressBar1.SymbolBefore = "";
             this.rjProgressBar1.TabIndex = 3;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Gold;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox1.Image = global::Autosaloon.Properties.Resources.dealership_icon_21;
+            this.pictureBox1.Location = new System.Drawing.Point(-1, -1);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(349, 265);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Gold;
+            this.label5.Font = new System.Drawing.Font("Impact", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(-1, 281);
+            this.label5.Name = "label5";
+            this.label5.Padding = new System.Windows.Forms.Padding(92, 70, 79, 68);
+            this.label5.Size = new System.Drawing.Size(349, 181);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "Auto House";
+            // 
+            // backToLoginButton
+            // 
+            this.backToLoginButton.BackColor = System.Drawing.Color.Gold;
+            this.backToLoginButton.BackgroundColor = System.Drawing.Color.Gold;
+            this.backToLoginButton.BorderColor = System.Drawing.Color.Black;
+            this.backToLoginButton.BorderRadius = 20;
+            this.backToLoginButton.BorderSize = 1;
+            this.backToLoginButton.FlatAppearance.BorderSize = 0;
+            this.backToLoginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.backToLoginButton.Font = new System.Drawing.Font("Impact", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.backToLoginButton.ForeColor = System.Drawing.Color.Black;
+            this.backToLoginButton.Location = new System.Drawing.Point(544, 358);
+            this.backToLoginButton.Name = "backToLoginButton";
+            this.backToLoginButton.Size = new System.Drawing.Size(143, 37);
+            this.backToLoginButton.TabIndex = 8;
+            this.backToLoginButton.Text = "Back to login";
+            this.backToLoginButton.TextColor = System.Drawing.Color.Black;
+            this.backToLoginButton.UseVisualStyleBackColor = false;
+            this.backToLoginButton.Click += new System.EventHandler(this.BackToLoginButton_Click);
+            // 
+            // closeButtonInSearcher
+            // 
+            this.closeButtonInSearcher.BackColor = System.Drawing.Color.Gold;
+            this.closeButtonInSearcher.BackgroundColor = System.Drawing.Color.Gold;
+            this.closeButtonInSearcher.BorderColor = System.Drawing.Color.Black;
+            this.closeButtonInSearcher.BorderRadius = 20;
+            this.closeButtonInSearcher.BorderSize = 1;
+            this.closeButtonInSearcher.FlatAppearance.BorderSize = 0;
+            this.closeButtonInSearcher.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.closeButtonInSearcher.Font = new System.Drawing.Font("Impact", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.closeButtonInSearcher.ForeColor = System.Drawing.Color.Black;
+            this.closeButtonInSearcher.Location = new System.Drawing.Point(718, 358);
+            this.closeButtonInSearcher.Name = "closeButtonInSearcher";
+            this.closeButtonInSearcher.Size = new System.Drawing.Size(143, 37);
+            this.closeButtonInSearcher.TabIndex = 9;
+            this.closeButtonInSearcher.Text = "Close";
+            this.closeButtonInSearcher.TextColor = System.Drawing.Color.Black;
+            this.closeButtonInSearcher.UseVisualStyleBackColor = false;
+            this.closeButtonInSearcher.Click += new System.EventHandler(this.CloseButtonInSearcher_Click);
+            // 
             // AutoSearcher
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 28F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.ClientSize = new System.Drawing.Size(543, 377);
+            this.ClientSize = new System.Drawing.Size(873, 462);
+            this.Controls.Add(this.closeButtonInSearcher);
+            this.Controls.Add(this.backToLoginButton);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.rjProgressBar1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -224,12 +299,14 @@
             this.Controls.Add(this.rjComboBox1);
             this.Controls.Add(this.rjButton1);
             this.Font = new System.Drawing.Font("Century", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "AutoSearcher";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Autosaloon";
             this.TransparencyKey = System.Drawing.Color.DarkOliveGreen;
             this.Load += new System.EventHandler(this.AutoSearcher_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -247,5 +324,9 @@
         private CustomBox.RJControls.RJComboBox rjComboBox4;
         private System.Windows.Forms.Label label4;
         private CustomBox.RJControls.RJProgressBar rjProgressBar1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label5;
+        private CustomBox.RJControls.RJButton backToLoginButton;
+        private CustomBox.RJControls.RJButton closeButtonInSearcher;
     }
 }

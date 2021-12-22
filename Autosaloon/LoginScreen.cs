@@ -5,13 +5,13 @@ using System.Windows.Forms;
 
 namespace Autosaloon
 {
-    public partial class Login : Form
+    public partial class LoginScreen : Form
     {
 
         private const string userID = "sa";
         private const string password = "sa";
 
-        public Login()
+        public LoginScreen()
         {
             InitializeComponent();
         }
