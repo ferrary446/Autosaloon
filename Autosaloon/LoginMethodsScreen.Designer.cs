@@ -43,46 +43,50 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Gold;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox1.Image = global::Autosaloon.Properties.Resources.dealership_icon_21;
-            this.pictureBox1.Location = new System.Drawing.Point(-1, -8);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(-1, -1);
+            this.pictureBox1.MaximumSize = new System.Drawing.Size(414, 345);
+            this.pictureBox1.MinimumSize = new System.Drawing.Size(414, 345);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(349, 266);
+            this.pictureBox1.Size = new System.Drawing.Size(414, 345);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Gold;
             this.label4.Font = new System.Drawing.Font("Impact", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(-1, 250);
+            this.label4.Location = new System.Drawing.Point(-1, 333);
+            this.label4.MaximumSize = new System.Drawing.Size(414, 237);
+            this.label4.MinimumSize = new System.Drawing.Size(414, 237);
             this.label4.Name = "label4";
-            this.label4.Padding = new System.Windows.Forms.Padding(92, 70, 79, 68);
-            this.label4.Size = new System.Drawing.Size(349, 181);
+            this.label4.Padding = new System.Windows.Forms.Padding(105, 93, 90, 91);
+            this.label4.Size = new System.Drawing.Size(414, 237);
             this.label4.TabIndex = 6;
             this.label4.Text = "Auto House";
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Impact", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(437, 33);
+            this.label1.Location = new System.Drawing.Point(499, 44);
+            this.label1.MaximumSize = new System.Drawing.Size(351, 42);
+            this.label1.MinimumSize = new System.Drawing.Size(351, 42);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(284, 34);
+            this.label1.Size = new System.Drawing.Size(351, 42);
             this.label1.TabIndex = 7;
             this.label1.Text = "Welcome to Auto House!";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(474, 93);
+            this.label2.Location = new System.Drawing.Point(542, 124);
+            this.label2.MaximumSize = new System.Drawing.Size(251, 29);
+            this.label2.MinimumSize = new System.Drawing.Size(251, 29);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(203, 23);
+            this.label2.Size = new System.Drawing.Size(251, 29);
             this.label2.TabIndex = 8;
             this.label2.Text = "Please choose your role:";
             // 
@@ -97,10 +101,11 @@
             this.adminButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.adminButton.Font = new System.Drawing.Font("Impact", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.adminButton.ForeColor = System.Drawing.Color.Black;
-            this.adminButton.Location = new System.Drawing.Point(519, 156);
-            this.adminButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.adminButton.Location = new System.Drawing.Point(593, 208);
+            this.adminButton.MaximumSize = new System.Drawing.Size(143, 37);
+            this.adminButton.MinimumSize = new System.Drawing.Size(143, 37);
             this.adminButton.Name = "adminButton";
-            this.adminButton.Size = new System.Drawing.Size(125, 28);
+            this.adminButton.Size = new System.Drawing.Size(143, 37);
             this.adminButton.TabIndex = 9;
             this.adminButton.Text = "I\'m Admin";
             this.adminButton.TextColor = System.Drawing.Color.Black;
@@ -118,10 +123,11 @@
             this.customerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.customerButton.Font = new System.Drawing.Font("Impact", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.customerButton.ForeColor = System.Drawing.Color.Black;
-            this.customerButton.Location = new System.Drawing.Point(519, 199);
-            this.customerButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.customerButton.Location = new System.Drawing.Point(593, 265);
+            this.customerButton.MaximumSize = new System.Drawing.Size(143, 37);
+            this.customerButton.MinimumSize = new System.Drawing.Size(143, 37);
             this.customerButton.Name = "customerButton";
-            this.customerButton.Size = new System.Drawing.Size(125, 28);
+            this.customerButton.Size = new System.Drawing.Size(143, 37);
             this.customerButton.TabIndex = 10;
             this.customerButton.Text = "I\'m Customer";
             this.customerButton.TextColor = System.Drawing.Color.Black;
@@ -139,10 +145,11 @@
             this.exitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.exitButton.Font = new System.Drawing.Font("Impact", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.exitButton.ForeColor = System.Drawing.Color.Black;
-            this.exitButton.Location = new System.Drawing.Point(519, 361);
-            this.exitButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.exitButton.Location = new System.Drawing.Point(593, 481);
+            this.exitButton.MaximumSize = new System.Drawing.Size(143, 37);
+            this.exitButton.MinimumSize = new System.Drawing.Size(143, 37);
             this.exitButton.Name = "exitButton";
-            this.exitButton.Size = new System.Drawing.Size(125, 28);
+            this.exitButton.Size = new System.Drawing.Size(143, 37);
             this.exitButton.TabIndex = 11;
             this.exitButton.Text = "Exit";
             this.exitButton.TextColor = System.Drawing.Color.Black;
@@ -151,10 +158,10 @@
             // 
             // LoginMethodsScreen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.ClientSize = new System.Drawing.Size(800, 429);
+            this.ClientSize = new System.Drawing.Size(915, 568);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.customerButton);
             this.Controls.Add(this.adminButton);
@@ -163,12 +170,14 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.MaximumSize = new System.Drawing.Size(915, 568);
+            this.MinimumSize = new System.Drawing.Size(915, 568);
             this.Name = "LoginMethodsScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoginMethodsScreen";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
