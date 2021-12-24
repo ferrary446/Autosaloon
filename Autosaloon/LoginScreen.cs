@@ -26,8 +26,8 @@ namespace Autosaloon
                 }
                 else
                 {
-                    AutoSearcher searcher = new AutoSearcher();
-                    searcher.Show();
+                    AddNewCarMenu addNewCarMenu = new AddNewCarMenu();
+                    addNewCarMenu.Show();
                     Hide();
                 }
             }
@@ -36,13 +36,13 @@ namespace Autosaloon
                 MessageBox.Show("Please enter user and password!");
             }
         }
-        private void clearButton_Click(object sender, EventArgs e)
+        private void ClearButton_Click(object sender, EventArgs e)
         {
             userIDTextBox.Texts = "";
             passwordTextBox.Texts = "";
         }
 
-        private void signInButton_Click(object sender, EventArgs e)
+        private void SignInButton_Click(object sender, EventArgs e)
         {
             LoginChecked();
         }
@@ -50,6 +50,13 @@ namespace Autosaloon
         private void Login_Load(object sender, EventArgs e)
         {
             passwordTextBox.PasswordChar = true;
+        }
+
+        private void BackButton_Click(object sender, EventArgs e)
+        {
+            LoginMethodsScreen loginMethodsScreen = new LoginMethodsScreen();
+            loginMethodsScreen.Show();
+            Hide();
         }
     }
 }

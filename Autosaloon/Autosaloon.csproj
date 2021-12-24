@@ -8,10 +8,20 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="LoginScreen.Designer.cs~RFc41d1.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="RJCodeAdvance.RJControl2s" Version="1.0.0">
 		<NoWarn>NU1701</NoWarn>
 	</PackageReference>
     <PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="MySql.Data">
+      <HintPath>\\Mac\Home\Downloads\MySql.Data\MySql.Data.DLL</HintPath>
+    </Reference>
   </ItemGroup>
 
   <ItemGroup>
