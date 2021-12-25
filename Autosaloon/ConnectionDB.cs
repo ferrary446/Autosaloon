@@ -87,7 +87,7 @@ namespace Autosaloon
                         {
                             command.CommandText = "DELETE FROM AutosaloonTable WHERE AutoID=" + i + "";
                             command.Connection = connection;
-                            int count = command.ExecuteNonQuery();
+                            command.ExecuteNonQuery();
                         }
                         catch (Exception ex)
                         {
