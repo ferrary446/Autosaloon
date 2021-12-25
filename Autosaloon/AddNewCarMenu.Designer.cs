@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -42,11 +42,11 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.userIDTextBox = new CustomBox.RJControls.RJTextBox();
-            this.rjTextBox1 = new CustomBox.RJControls.RJTextBox();
-            this.rjTextBox2 = new CustomBox.RJControls.RJTextBox();
-            this.rjTextBox3 = new CustomBox.RJControls.RJTextBox();
-            this.rjTextBox4 = new CustomBox.RJControls.RJTextBox();
+            this.autoIDTextBox = new CustomBox.RJControls.RJTextBox();
+            this.autoBrandTextBox = new CustomBox.RJControls.RJTextBox();
+            this.autoModelTextBox = new CustomBox.RJControls.RJTextBox();
+            this.autoSeriesTextBox = new CustomBox.RJControls.RJTextBox();
+            this.cityLocationTextBox = new CustomBox.RJControls.RJTextBox();
             this.backToLoginButton = new CustomBox.RJControls.RJButton();
             this.showAllCarsButton = new CustomBox.RJControls.RJButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -144,23 +144,23 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableCarsGridView.BackgroundColor = System.Drawing.Color.Gold;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Gold;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.DarkSlateBlue;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tableCarsGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Gold;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.DarkSlateBlue;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tableCarsGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.tableCarsGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Gold;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DarkSlateBlue;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tableCarsGridView.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Gold;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.DarkSlateBlue;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tableCarsGridView.DefaultCellStyle = dataGridViewCellStyle4;
             this.tableCarsGridView.GridColor = System.Drawing.Color.DarkSlateBlue;
             this.tableCarsGridView.Location = new System.Drawing.Point(387, 209);
             this.tableCarsGridView.MaximumSize = new System.Drawing.Size(793, 250);
@@ -253,125 +253,125 @@
             this.label7.TabIndex = 16;
             this.label7.Text = "City Location:";
             // 
-            // userIDTextBox
+            // autoIDTextBox
             // 
-            this.userIDTextBox.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.userIDTextBox.BorderColor = System.Drawing.Color.Gold;
-            this.userIDTextBox.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.userIDTextBox.BorderRadius = 0;
-            this.userIDTextBox.BorderSize = 2;
-            this.userIDTextBox.Font = new System.Drawing.Font("Impact", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.userIDTextBox.ForeColor = System.Drawing.Color.White;
-            this.userIDTextBox.Location = new System.Drawing.Point(457, 78);
-            this.userIDTextBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.userIDTextBox.MaximumSize = new System.Drawing.Size(161, 29);
-            this.userIDTextBox.MinimumSize = new System.Drawing.Size(161, 29);
-            this.userIDTextBox.Multiline = false;
-            this.userIDTextBox.Name = "userIDTextBox";
-            this.userIDTextBox.Padding = new System.Windows.Forms.Padding(9, 5, 9, 5);
-            this.userIDTextBox.PasswordChar = false;
-            this.userIDTextBox.PlaceholderColor = System.Drawing.Color.White;
-            this.userIDTextBox.PlaceholderText = "";
-            this.userIDTextBox.Size = new System.Drawing.Size(161, 29);
-            this.userIDTextBox.TabIndex = 17;
-            this.userIDTextBox.Texts = "";
-            this.userIDTextBox.UnderlinedStyle = true;
+            this.autoIDTextBox.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.autoIDTextBox.BorderColor = System.Drawing.Color.Gold;
+            this.autoIDTextBox.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.autoIDTextBox.BorderRadius = 0;
+            this.autoIDTextBox.BorderSize = 2;
+            this.autoIDTextBox.Font = new System.Drawing.Font("Impact", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.autoIDTextBox.ForeColor = System.Drawing.Color.White;
+            this.autoIDTextBox.Location = new System.Drawing.Point(457, 78);
+            this.autoIDTextBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.autoIDTextBox.MaximumSize = new System.Drawing.Size(161, 29);
+            this.autoIDTextBox.MinimumSize = new System.Drawing.Size(161, 29);
+            this.autoIDTextBox.Multiline = false;
+            this.autoIDTextBox.Name = "autoIDTextBox";
+            this.autoIDTextBox.Padding = new System.Windows.Forms.Padding(9, 5, 9, 5);
+            this.autoIDTextBox.PasswordChar = false;
+            this.autoIDTextBox.PlaceholderColor = System.Drawing.Color.White;
+            this.autoIDTextBox.PlaceholderText = "";
+            this.autoIDTextBox.Size = new System.Drawing.Size(161, 29);
+            this.autoIDTextBox.TabIndex = 17;
+            this.autoIDTextBox.Texts = "";
+            this.autoIDTextBox.UnderlinedStyle = true;
             // 
-            // rjTextBox1
+            // autoBrandTextBox
             // 
-            this.rjTextBox1.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.rjTextBox1.BorderColor = System.Drawing.Color.Gold;
-            this.rjTextBox1.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.rjTextBox1.BorderRadius = 0;
-            this.rjTextBox1.BorderSize = 2;
-            this.rjTextBox1.Font = new System.Drawing.Font("Impact", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.rjTextBox1.ForeColor = System.Drawing.Color.White;
-            this.rjTextBox1.Location = new System.Drawing.Point(738, 78);
-            this.rjTextBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.rjTextBox1.MaximumSize = new System.Drawing.Size(161, 29);
-            this.rjTextBox1.MinimumSize = new System.Drawing.Size(161, 29);
-            this.rjTextBox1.Multiline = false;
-            this.rjTextBox1.Name = "rjTextBox1";
-            this.rjTextBox1.Padding = new System.Windows.Forms.Padding(9, 5, 9, 5);
-            this.rjTextBox1.PasswordChar = false;
-            this.rjTextBox1.PlaceholderColor = System.Drawing.Color.White;
-            this.rjTextBox1.PlaceholderText = "";
-            this.rjTextBox1.Size = new System.Drawing.Size(161, 29);
-            this.rjTextBox1.TabIndex = 18;
-            this.rjTextBox1.Texts = "";
-            this.rjTextBox1.UnderlinedStyle = true;
+            this.autoBrandTextBox.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.autoBrandTextBox.BorderColor = System.Drawing.Color.Gold;
+            this.autoBrandTextBox.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.autoBrandTextBox.BorderRadius = 0;
+            this.autoBrandTextBox.BorderSize = 2;
+            this.autoBrandTextBox.Font = new System.Drawing.Font("Impact", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.autoBrandTextBox.ForeColor = System.Drawing.Color.White;
+            this.autoBrandTextBox.Location = new System.Drawing.Point(738, 78);
+            this.autoBrandTextBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.autoBrandTextBox.MaximumSize = new System.Drawing.Size(161, 29);
+            this.autoBrandTextBox.MinimumSize = new System.Drawing.Size(161, 29);
+            this.autoBrandTextBox.Multiline = false;
+            this.autoBrandTextBox.Name = "autoBrandTextBox";
+            this.autoBrandTextBox.Padding = new System.Windows.Forms.Padding(9, 5, 9, 5);
+            this.autoBrandTextBox.PasswordChar = false;
+            this.autoBrandTextBox.PlaceholderColor = System.Drawing.Color.White;
+            this.autoBrandTextBox.PlaceholderText = "";
+            this.autoBrandTextBox.Size = new System.Drawing.Size(161, 29);
+            this.autoBrandTextBox.TabIndex = 18;
+            this.autoBrandTextBox.Texts = "";
+            this.autoBrandTextBox.UnderlinedStyle = true;
             // 
-            // rjTextBox2
+            // autoModelTextBox
             // 
-            this.rjTextBox2.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.rjTextBox2.BorderColor = System.Drawing.Color.Gold;
-            this.rjTextBox2.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.rjTextBox2.BorderRadius = 0;
-            this.rjTextBox2.BorderSize = 2;
-            this.rjTextBox2.Font = new System.Drawing.Font("Impact", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.rjTextBox2.ForeColor = System.Drawing.Color.White;
-            this.rjTextBox2.Location = new System.Drawing.Point(1019, 78);
-            this.rjTextBox2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.rjTextBox2.MaximumSize = new System.Drawing.Size(161, 29);
-            this.rjTextBox2.MinimumSize = new System.Drawing.Size(161, 29);
-            this.rjTextBox2.Multiline = false;
-            this.rjTextBox2.Name = "rjTextBox2";
-            this.rjTextBox2.Padding = new System.Windows.Forms.Padding(9, 5, 9, 5);
-            this.rjTextBox2.PasswordChar = false;
-            this.rjTextBox2.PlaceholderColor = System.Drawing.Color.White;
-            this.rjTextBox2.PlaceholderText = "";
-            this.rjTextBox2.Size = new System.Drawing.Size(161, 29);
-            this.rjTextBox2.TabIndex = 19;
-            this.rjTextBox2.Texts = "";
-            this.rjTextBox2.UnderlinedStyle = true;
+            this.autoModelTextBox.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.autoModelTextBox.BorderColor = System.Drawing.Color.Gold;
+            this.autoModelTextBox.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.autoModelTextBox.BorderRadius = 0;
+            this.autoModelTextBox.BorderSize = 2;
+            this.autoModelTextBox.Font = new System.Drawing.Font("Impact", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.autoModelTextBox.ForeColor = System.Drawing.Color.White;
+            this.autoModelTextBox.Location = new System.Drawing.Point(1019, 78);
+            this.autoModelTextBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.autoModelTextBox.MaximumSize = new System.Drawing.Size(161, 29);
+            this.autoModelTextBox.MinimumSize = new System.Drawing.Size(161, 29);
+            this.autoModelTextBox.Multiline = false;
+            this.autoModelTextBox.Name = "autoModelTextBox";
+            this.autoModelTextBox.Padding = new System.Windows.Forms.Padding(9, 5, 9, 5);
+            this.autoModelTextBox.PasswordChar = false;
+            this.autoModelTextBox.PlaceholderColor = System.Drawing.Color.White;
+            this.autoModelTextBox.PlaceholderText = "";
+            this.autoModelTextBox.Size = new System.Drawing.Size(161, 29);
+            this.autoModelTextBox.TabIndex = 19;
+            this.autoModelTextBox.Texts = "";
+            this.autoModelTextBox.UnderlinedStyle = true;
             // 
-            // rjTextBox3
+            // autoSeriesTextBox
             // 
-            this.rjTextBox3.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.rjTextBox3.BorderColor = System.Drawing.Color.Gold;
-            this.rjTextBox3.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.rjTextBox3.BorderRadius = 0;
-            this.rjTextBox3.BorderSize = 2;
-            this.rjTextBox3.Font = new System.Drawing.Font("Impact", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.rjTextBox3.ForeColor = System.Drawing.Color.White;
-            this.rjTextBox3.Location = new System.Drawing.Point(500, 146);
-            this.rjTextBox3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.rjTextBox3.MaximumSize = new System.Drawing.Size(161, 29);
-            this.rjTextBox3.MinimumSize = new System.Drawing.Size(161, 29);
-            this.rjTextBox3.Multiline = false;
-            this.rjTextBox3.Name = "rjTextBox3";
-            this.rjTextBox3.Padding = new System.Windows.Forms.Padding(9, 5, 9, 5);
-            this.rjTextBox3.PasswordChar = false;
-            this.rjTextBox3.PlaceholderColor = System.Drawing.Color.White;
-            this.rjTextBox3.PlaceholderText = "";
-            this.rjTextBox3.Size = new System.Drawing.Size(161, 29);
-            this.rjTextBox3.TabIndex = 20;
-            this.rjTextBox3.Texts = "";
-            this.rjTextBox3.UnderlinedStyle = true;
+            this.autoSeriesTextBox.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.autoSeriesTextBox.BorderColor = System.Drawing.Color.Gold;
+            this.autoSeriesTextBox.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.autoSeriesTextBox.BorderRadius = 0;
+            this.autoSeriesTextBox.BorderSize = 2;
+            this.autoSeriesTextBox.Font = new System.Drawing.Font("Impact", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.autoSeriesTextBox.ForeColor = System.Drawing.Color.White;
+            this.autoSeriesTextBox.Location = new System.Drawing.Point(500, 146);
+            this.autoSeriesTextBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.autoSeriesTextBox.MaximumSize = new System.Drawing.Size(161, 29);
+            this.autoSeriesTextBox.MinimumSize = new System.Drawing.Size(161, 29);
+            this.autoSeriesTextBox.Multiline = false;
+            this.autoSeriesTextBox.Name = "autoSeriesTextBox";
+            this.autoSeriesTextBox.Padding = new System.Windows.Forms.Padding(9, 5, 9, 5);
+            this.autoSeriesTextBox.PasswordChar = false;
+            this.autoSeriesTextBox.PlaceholderColor = System.Drawing.Color.White;
+            this.autoSeriesTextBox.PlaceholderText = "";
+            this.autoSeriesTextBox.Size = new System.Drawing.Size(161, 29);
+            this.autoSeriesTextBox.TabIndex = 20;
+            this.autoSeriesTextBox.Texts = "";
+            this.autoSeriesTextBox.UnderlinedStyle = true;
             // 
-            // rjTextBox4
+            // cityLocationTextBox
             // 
-            this.rjTextBox4.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.rjTextBox4.BorderColor = System.Drawing.Color.Gold;
-            this.rjTextBox4.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.rjTextBox4.BorderRadius = 0;
-            this.rjTextBox4.BorderSize = 2;
-            this.rjTextBox4.Font = new System.Drawing.Font("Impact", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.rjTextBox4.ForeColor = System.Drawing.Color.White;
-            this.rjTextBox4.Location = new System.Drawing.Point(794, 148);
-            this.rjTextBox4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.rjTextBox4.MaximumSize = new System.Drawing.Size(161, 29);
-            this.rjTextBox4.MinimumSize = new System.Drawing.Size(161, 29);
-            this.rjTextBox4.Multiline = false;
-            this.rjTextBox4.Name = "rjTextBox4";
-            this.rjTextBox4.Padding = new System.Windows.Forms.Padding(9, 5, 9, 5);
-            this.rjTextBox4.PasswordChar = false;
-            this.rjTextBox4.PlaceholderColor = System.Drawing.Color.White;
-            this.rjTextBox4.PlaceholderText = "";
-            this.rjTextBox4.Size = new System.Drawing.Size(161, 29);
-            this.rjTextBox4.TabIndex = 21;
-            this.rjTextBox4.Texts = "";
-            this.rjTextBox4.UnderlinedStyle = true;
+            this.cityLocationTextBox.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.cityLocationTextBox.BorderColor = System.Drawing.Color.Gold;
+            this.cityLocationTextBox.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.cityLocationTextBox.BorderRadius = 0;
+            this.cityLocationTextBox.BorderSize = 2;
+            this.cityLocationTextBox.Font = new System.Drawing.Font("Impact", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cityLocationTextBox.ForeColor = System.Drawing.Color.White;
+            this.cityLocationTextBox.Location = new System.Drawing.Point(794, 148);
+            this.cityLocationTextBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.cityLocationTextBox.MaximumSize = new System.Drawing.Size(161, 29);
+            this.cityLocationTextBox.MinimumSize = new System.Drawing.Size(161, 29);
+            this.cityLocationTextBox.Multiline = false;
+            this.cityLocationTextBox.Name = "cityLocationTextBox";
+            this.cityLocationTextBox.Padding = new System.Windows.Forms.Padding(9, 5, 9, 5);
+            this.cityLocationTextBox.PasswordChar = false;
+            this.cityLocationTextBox.PlaceholderColor = System.Drawing.Color.White;
+            this.cityLocationTextBox.PlaceholderText = "";
+            this.cityLocationTextBox.Size = new System.Drawing.Size(161, 29);
+            this.cityLocationTextBox.TabIndex = 21;
+            this.cityLocationTextBox.Texts = "";
+            this.cityLocationTextBox.UnderlinedStyle = true;
             // 
             // backToLoginButton
             // 
@@ -425,11 +425,11 @@
             this.ClientSize = new System.Drawing.Size(1218, 573);
             this.Controls.Add(this.showAllCarsButton);
             this.Controls.Add(this.backToLoginButton);
-            this.Controls.Add(this.rjTextBox4);
-            this.Controls.Add(this.rjTextBox3);
-            this.Controls.Add(this.rjTextBox2);
-            this.Controls.Add(this.rjTextBox1);
-            this.Controls.Add(this.userIDTextBox);
+            this.Controls.Add(this.cityLocationTextBox);
+            this.Controls.Add(this.autoSeriesTextBox);
+            this.Controls.Add(this.autoModelTextBox);
+            this.Controls.Add(this.autoBrandTextBox);
+            this.Controls.Add(this.autoIDTextBox);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -468,11 +468,11 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private CustomBox.RJControls.RJTextBox userIDTextBox;
-        private CustomBox.RJControls.RJTextBox rjTextBox1;
-        private CustomBox.RJControls.RJTextBox rjTextBox2;
-        private CustomBox.RJControls.RJTextBox rjTextBox3;
-        private CustomBox.RJControls.RJTextBox rjTextBox4;
+        private CustomBox.RJControls.RJTextBox autoIDTextBox;
+        private CustomBox.RJControls.RJTextBox autoBrandTextBox;
+        private CustomBox.RJControls.RJTextBox autoModelTextBox;
+        private CustomBox.RJControls.RJTextBox autoSeriesTextBox;
+        private CustomBox.RJControls.RJTextBox cityLocationTextBox;
         private CustomBox.RJControls.RJButton backToLoginButton;
         private CustomBox.RJControls.RJButton showAllCarsButton;
     }

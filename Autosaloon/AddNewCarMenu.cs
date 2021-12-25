@@ -17,24 +17,66 @@ namespace Autosaloon
             InitializeComponent();
         }
 
+        private bool textBoxDataChecked()
+        {
+            bool checker = false;
+
+            if (autoIDTextBox.Texts != "" && 
+                autoBrandTextBox.Texts != "" &&
+                autoModelTextBox.Texts != "" &&
+                autoSeriesTextBox.Texts != "" &&
+                cityLocationTextBox.Texts != "")
+            {
+                checker = true;
+            }
+            else
+            {
+                MessageBox.Show("All fields must be filled!");
+            }
+
+            return checker;
+        }
+
+        private int parserAutoIDTextBox(string parseText)
+        {
+            int id = 0;
+
+            try
+            {
+                id = Int32.Parse(parseText);
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("Auto ID must be number!");
+            }
+
+            return id;
+        }
+
         private void AddCarButton_Click(object sender, EventArgs e)
         {
-            ConnectionDB connectionDB = new ConnectionDB();
-            DataTable dataTable = connectionDB.GetDataTableFromQuery("insert into AutosaloonTable " +
-                "(AutoID, AutoBrand, AutoModel, AutoSeries, CityLocation) " +
-                "values " +
-                "('1', 'Audi', 'A3', 'S-Line', 'Prague')");
-            tableCarsGridView.DataSource = dataTable;
+            if (textBoxDataChecked())
+            {
+                ConnectionDB connectionDB = new ConnectionDB();
+                connectionDB.InsertIntoAutosaloonTable(
+                                                    parserAutoIDTextBox(autoIDTextBox.Texts),
+                                                    autoBrandTextBox.Texts,
+                                                    autoModelTextBox.Texts,
+                                                    autoSeriesTextBox.Texts,
+                                                    cityLocationTextBox.Texts
+                                                    );
+            }
         }
 
         private void EditCarButton_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void RemoveCarButton_Click(object sender, EventArgs e)
         {
-
+            ConnectionDB connectionDB = new ConnectionDB();
+            connectionDB.RemoveFromAutosaloonTable(tableCarsGridView);
         }
 
         private void BackToLoginButton_Click(object sender, EventArgs e)
@@ -47,7 +89,7 @@ namespace Autosaloon
         private void ShowAllCarsButton_Click(object sender, EventArgs e)
         {
             ConnectionDB connectionDB = new ConnectionDB();
-            DataTable dataTable = connectionDB.GetDataTableFromQuery("select * from AutosaloonTable");
+            DataTable dataTable = connectionDB.GetDataTableFromQuery("AutosaloonTable");
             tableCarsGridView.DataSource = dataTable;
         }
     }

@@ -8,9 +8,6 @@ namespace Autosaloon
     public partial class LoginScreen : Form
     {
 
-        private const string userID = "sa";
-        private const string password = "sa";
-
         public LoginScreen()
         {
             InitializeComponent();
@@ -20,7 +17,7 @@ namespace Autosaloon
         {
             if (userIDTextBox.Texts != "" && passwordTextBox.Texts != "")
             {
-                if (userIDTextBox.Texts != userID || passwordTextBox.Texts != password)
+                if (userIDTextBox.Texts != LoginData.adminID || passwordTextBox.Texts != LoginData.adminPassword)
                 {
                     MessageBox.Show("Login or password is wrong!");
                 }
