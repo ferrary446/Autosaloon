@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -49,6 +50,12 @@
             this.cityLocationTextBox = new CustomBox.RJControls.RJTextBox();
             this.backToLoginButton = new CustomBox.RJControls.RJButton();
             this.showAllCarsButton = new CustomBox.RJControls.RJButton();
+            this.idColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.autoIDColoumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.autoBrandColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.autoModelColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.autoSeriesColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cityLocationColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tableCarsGridView)).BeginInit();
             this.SuspendLayout();
@@ -144,29 +151,44 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableCarsGridView.BackgroundColor = System.Drawing.Color.Gold;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Gold;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.DarkSlateBlue;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tableCarsGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Gold;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.DarkSlateBlue;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tableCarsGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.tableCarsGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Gold;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.DarkSlateBlue;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tableCarsGridView.DefaultCellStyle = dataGridViewCellStyle4;
+            this.tableCarsGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idColumn,
+            this.autoIDColoumn,
+            this.autoBrandColumn,
+            this.autoModelColumn,
+            this.autoSeriesColumn,
+            this.cityLocationColumn});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Gold;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DarkSlateBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tableCarsGridView.DefaultCellStyle = dataGridViewCellStyle2;
             this.tableCarsGridView.GridColor = System.Drawing.Color.DarkSlateBlue;
             this.tableCarsGridView.Location = new System.Drawing.Point(387, 209);
             this.tableCarsGridView.MaximumSize = new System.Drawing.Size(793, 250);
             this.tableCarsGridView.MinimumSize = new System.Drawing.Size(793, 250);
             this.tableCarsGridView.Name = "tableCarsGridView";
             this.tableCarsGridView.ReadOnly = true;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tableCarsGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.tableCarsGridView.RowTemplate.Height = 25;
             this.tableCarsGridView.Size = new System.Drawing.Size(793, 250);
             this.tableCarsGridView.TabIndex = 10;
@@ -417,6 +439,54 @@
             this.showAllCarsButton.UseVisualStyleBackColor = false;
             this.showAllCarsButton.Click += new System.EventHandler(this.ShowAllCarsButton_Click);
             // 
+            // idColumn
+            // 
+            this.idColumn.DataPropertyName = "ID";
+            this.idColumn.HeaderText = "ID";
+            this.idColumn.Name = "idColumn";
+            this.idColumn.ReadOnly = true;
+            this.idColumn.Visible = false;
+            // 
+            // autoIDColoumn
+            // 
+            this.autoIDColoumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.autoIDColoumn.DataPropertyName = "AutoID";
+            this.autoIDColoumn.HeaderText = "Auto ID";
+            this.autoIDColoumn.Name = "autoIDColoumn";
+            this.autoIDColoumn.ReadOnly = true;
+            // 
+            // autoBrandColumn
+            // 
+            this.autoBrandColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.autoBrandColumn.DataPropertyName = "AutoBrand";
+            this.autoBrandColumn.HeaderText = "Auto Brand";
+            this.autoBrandColumn.Name = "autoBrandColumn";
+            this.autoBrandColumn.ReadOnly = true;
+            // 
+            // autoModelColumn
+            // 
+            this.autoModelColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.autoModelColumn.DataPropertyName = "AutoModel";
+            this.autoModelColumn.HeaderText = "Auto Model";
+            this.autoModelColumn.Name = "autoModelColumn";
+            this.autoModelColumn.ReadOnly = true;
+            // 
+            // autoSeriesColumn
+            // 
+            this.autoSeriesColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.autoSeriesColumn.DataPropertyName = "AutoSeries";
+            this.autoSeriesColumn.HeaderText = "Auto Series";
+            this.autoSeriesColumn.Name = "autoSeriesColumn";
+            this.autoSeriesColumn.ReadOnly = true;
+            // 
+            // cityLocationColumn
+            // 
+            this.cityLocationColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.cityLocationColumn.DataPropertyName = "CityLocation";
+            this.cityLocationColumn.HeaderText = "City Location";
+            this.cityLocationColumn.Name = "cityLocationColumn";
+            this.cityLocationColumn.ReadOnly = true;
+            // 
             // AddNewCarMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -475,5 +545,11 @@
         private CustomBox.RJControls.RJTextBox cityLocationTextBox;
         private CustomBox.RJControls.RJButton backToLoginButton;
         private CustomBox.RJControls.RJButton showAllCarsButton;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn autoIDColoumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn autoBrandColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn autoModelColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn autoSeriesColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cityLocationColumn;
     }
 }

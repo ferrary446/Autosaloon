@@ -22,7 +22,7 @@ namespace Autosaloon
 
                 connection.Open();
 
-                command.CommandText = $"select * from {tableName}";
+                command.CommandText = $"SELECT * FROM {tableName}";
                 command.Connection = connection;
 
                 SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
@@ -70,31 +70,13 @@ namespace Autosaloon
             {
                 SqlCommand command = new SqlCommand();
                 connection.Open();
-                for (int i = 0; i < dataGridView.Rows.Count; i++)
-                {
-                    DataGridViewRow removeRow = dataGridView.Rows[i];
-                    if (removeRow.Selected == true)
-                    {
-                        try
-                        {
-                            dataGridView.Rows.RemoveAt(i);
-                        }
-                        catch (System.InvalidOperationException)
-                        {
-                            MessageBox.Show("The row is empty!");
-                        }
-                        try
-                        {
-                            command.CommandText = "DELETE FROM AutosaloonTable WHERE AutoID=" + i + "";
-                            command.Connection = connection;
-                            command.ExecuteNonQuery();
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show(ex.ToString());
-                        }
-                    }
-                }
+
+                command.CommandText = "AutoRemove";
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@ID", Convert.ToInt32(dataGridView.CurrentRow.Cells["idColumn"].Value));
+                command.Connection = connection;
+                command.ExecuteNonQuery();
+
                 connection.Close();
             }
         }
