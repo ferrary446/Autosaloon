@@ -255,7 +255,7 @@
             this.editCarButton.Text = "Edit";
             this.editCarButton.TextColor = System.Drawing.Color.Black;
             this.editCarButton.UseVisualStyleBackColor = false;
-            this.editCarButton.Click += new System.EventHandler(this.editCarButton_Click);
+            this.editCarButton.Click += new System.EventHandler(this.EditCarButton_Click);
             // 
             // cancelEditButton
             // 
@@ -277,7 +277,7 @@
             this.cancelEditButton.Text = "Cancel";
             this.cancelEditButton.TextColor = System.Drawing.Color.Black;
             this.cancelEditButton.UseVisualStyleBackColor = false;
-            this.cancelEditButton.Click += new System.EventHandler(this.cancelEditButton_Click);
+            this.cancelEditButton.Click += new System.EventHandler(this.CancelEditButton_Click);
             // 
             // EditScreen
             // 

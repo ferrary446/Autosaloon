@@ -37,7 +37,12 @@
             this.addCarButton = new CustomBox.RJControls.RJButton();
             this.removeCarButton = new CustomBox.RJControls.RJButton();
             this.tableCarsGridView = new System.Windows.Forms.DataGridView();
-            this.editCarButton = new CustomBox.RJControls.RJButton();
+            this.idColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.autoIDColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.autoBrandColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.autoModelColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.autoSeriesColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cityLocationColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -49,12 +54,7 @@
             this.autoSeriesTextBox = new CustomBox.RJControls.RJTextBox();
             this.cityLocationTextBox = new CustomBox.RJControls.RJTextBox();
             this.backToLoginButton = new CustomBox.RJControls.RJButton();
-            this.idColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.autoIDColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.autoBrandColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.autoModelColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.autoSeriesColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cityLocationColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tableCarsGridView)).BeginInit();
             this.SuspendLayout();
@@ -133,7 +133,7 @@
             this.removeCarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.removeCarButton.Font = new System.Drawing.Font("Impact", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.removeCarButton.ForeColor = System.Drawing.Color.Black;
-            this.removeCarButton.Location = new System.Drawing.Point(675, 491);
+            this.removeCarButton.Location = new System.Drawing.Point(532, 491);
             this.removeCarButton.MaximumSize = new System.Drawing.Size(112, 34);
             this.removeCarButton.MinimumSize = new System.Drawing.Size(112, 34);
             this.removeCarButton.Name = "removeCarButton";
@@ -146,6 +146,8 @@
             // 
             // tableCarsGridView
             // 
+            this.tableCarsGridView.AllowUserToAddRows = false;
+            this.tableCarsGridView.AllowUserToDeleteRows = false;
             this.tableCarsGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -191,28 +193,55 @@
             this.tableCarsGridView.RowTemplate.Height = 25;
             this.tableCarsGridView.Size = new System.Drawing.Size(793, 250);
             this.tableCarsGridView.TabIndex = 10;
-            this.tableCarsGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tableCarsGridView_CellDoubleClick);
+            this.tableCarsGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TableCarsGridView_CellDoubleClick);
             // 
-            // editCarButton
+            // idColumn
             // 
-            this.editCarButton.BackColor = System.Drawing.Color.Gold;
-            this.editCarButton.BackgroundColor = System.Drawing.Color.Gold;
-            this.editCarButton.BorderColor = System.Drawing.Color.Black;
-            this.editCarButton.BorderRadius = 20;
-            this.editCarButton.BorderSize = 1;
-            this.editCarButton.FlatAppearance.BorderSize = 0;
-            this.editCarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.editCarButton.Font = new System.Drawing.Font("Impact", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.editCarButton.ForeColor = System.Drawing.Color.Black;
-            this.editCarButton.Location = new System.Drawing.Point(532, 491);
-            this.editCarButton.MaximumSize = new System.Drawing.Size(112, 34);
-            this.editCarButton.MinimumSize = new System.Drawing.Size(112, 34);
-            this.editCarButton.Name = "editCarButton";
-            this.editCarButton.Size = new System.Drawing.Size(112, 34);
-            this.editCarButton.TabIndex = 11;
-            this.editCarButton.Text = "Edit";
-            this.editCarButton.TextColor = System.Drawing.Color.Black;
-            this.editCarButton.UseVisualStyleBackColor = false;
+            this.idColumn.DataPropertyName = "ID";
+            this.idColumn.HeaderText = "ID";
+            this.idColumn.Name = "idColumn";
+            this.idColumn.ReadOnly = true;
+            this.idColumn.Visible = false;
+            // 
+            // autoIDColumn
+            // 
+            this.autoIDColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.autoIDColumn.DataPropertyName = "AutoID";
+            this.autoIDColumn.HeaderText = "Auto ID";
+            this.autoIDColumn.Name = "autoIDColumn";
+            this.autoIDColumn.ReadOnly = true;
+            // 
+            // autoBrandColumn
+            // 
+            this.autoBrandColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.autoBrandColumn.DataPropertyName = "AutoBrand";
+            this.autoBrandColumn.HeaderText = "Auto Brand";
+            this.autoBrandColumn.Name = "autoBrandColumn";
+            this.autoBrandColumn.ReadOnly = true;
+            // 
+            // autoModelColumn
+            // 
+            this.autoModelColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.autoModelColumn.DataPropertyName = "AutoModel";
+            this.autoModelColumn.HeaderText = "Auto Model";
+            this.autoModelColumn.Name = "autoModelColumn";
+            this.autoModelColumn.ReadOnly = true;
+            // 
+            // autoSeriesColumn
+            // 
+            this.autoSeriesColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.autoSeriesColumn.DataPropertyName = "AutoSeries";
+            this.autoSeriesColumn.HeaderText = "Auto Series";
+            this.autoSeriesColumn.Name = "autoSeriesColumn";
+            this.autoSeriesColumn.ReadOnly = true;
+            // 
+            // cityLocationColumn
+            // 
+            this.cityLocationColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.cityLocationColumn.DataPropertyName = "CityLocation";
+            this.cityLocationColumn.HeaderText = "City Location";
+            this.cityLocationColumn.Name = "cityLocationColumn";
+            this.cityLocationColumn.ReadOnly = true;
             // 
             // label2
             // 
@@ -416,53 +445,17 @@
             this.backToLoginButton.UseVisualStyleBackColor = false;
             this.backToLoginButton.Click += new System.EventHandler(this.BackToLoginButton_Click);
             // 
-            // idColumn
+            // label8
             // 
-            this.idColumn.DataPropertyName = "ID";
-            this.idColumn.HeaderText = "ID";
-            this.idColumn.Name = "idColumn";
-            this.idColumn.ReadOnly = true;
-            this.idColumn.Visible = false;
-            // 
-            // autoIDColumn
-            // 
-            this.autoIDColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.autoIDColumn.DataPropertyName = "AutoID";
-            this.autoIDColumn.HeaderText = "Auto ID";
-            this.autoIDColumn.Name = "autoIDColumn";
-            this.autoIDColumn.ReadOnly = true;
-            // 
-            // autoBrandColumn
-            // 
-            this.autoBrandColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.autoBrandColumn.DataPropertyName = "AutoBrand";
-            this.autoBrandColumn.HeaderText = "Auto Brand";
-            this.autoBrandColumn.Name = "autoBrandColumn";
-            this.autoBrandColumn.ReadOnly = true;
-            // 
-            // autoModelColumn
-            // 
-            this.autoModelColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.autoModelColumn.DataPropertyName = "AutoModel";
-            this.autoModelColumn.HeaderText = "Auto Model";
-            this.autoModelColumn.Name = "autoModelColumn";
-            this.autoModelColumn.ReadOnly = true;
-            // 
-            // autoSeriesColumn
-            // 
-            this.autoSeriesColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.autoSeriesColumn.DataPropertyName = "AutoSeries";
-            this.autoSeriesColumn.HeaderText = "Auto Series";
-            this.autoSeriesColumn.Name = "autoSeriesColumn";
-            this.autoSeriesColumn.ReadOnly = true;
-            // 
-            // cityLocationColumn
-            // 
-            this.cityLocationColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.cityLocationColumn.DataPropertyName = "CityLocation";
-            this.cityLocationColumn.HeaderText = "City Location";
-            this.cityLocationColumn.Name = "cityLocationColumn";
-            this.cityLocationColumn.ReadOnly = true;
+            this.label8.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label8.Location = new System.Drawing.Point(680, 496);
+            this.label8.MaximumSize = new System.Drawing.Size(179, 58);
+            this.label8.MinimumSize = new System.Drawing.Size(179, 58);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(179, 58);
+            this.label8.TabIndex = 23;
+            this.label8.Text = "Double click on cell for editing";
             // 
             // AddNewCarMenu
             // 
@@ -470,6 +463,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.ClientSize = new System.Drawing.Size(1218, 573);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.backToLoginButton);
             this.Controls.Add(this.cityLocationTextBox);
             this.Controls.Add(this.autoSeriesTextBox);
@@ -481,7 +475,6 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.editCarButton);
             this.Controls.Add(this.tableCarsGridView);
             this.Controls.Add(this.removeCarButton);
             this.Controls.Add(this.addCarButton);
@@ -509,7 +502,6 @@
         private CustomBox.RJControls.RJButton addCarButton;
         private CustomBox.RJControls.RJButton removeCarButton;
         private System.Windows.Forms.DataGridView tableCarsGridView;
-        private CustomBox.RJControls.RJButton editCarButton;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
@@ -527,5 +519,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn autoModelColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn autoSeriesColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cityLocationColumn;
+        private System.Windows.Forms.Label label8;
     }
 }

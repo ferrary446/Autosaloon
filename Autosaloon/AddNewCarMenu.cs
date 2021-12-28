@@ -17,7 +17,7 @@ namespace Autosaloon
             InitializeComponent();
         }
 
-        private bool textBoxDataChecked()
+        private bool TextBoxDataChecked()
         {
             bool checker = false;
 
@@ -37,7 +37,7 @@ namespace Autosaloon
             return checker;
         }
 
-        private int parserAutoIDTextBox(string parseText)
+        private int ParserAutoIDTextBox(string parseText)
         {
             int id = 0;
 
@@ -53,7 +53,7 @@ namespace Autosaloon
             return id;
         }
 
-        public void reloadData()
+        private void ReloadData()
         {
             ConnectionDB connectionDB = new ConnectionDB();
             DataTable dataTable = connectionDB.GetDataTableFromQuery("AutosaloonTable");
@@ -62,18 +62,18 @@ namespace Autosaloon
 
         private void AddCarButton_Click(object sender, EventArgs e)
         {
-            if (textBoxDataChecked())
+            if (TextBoxDataChecked())
             {
                 ConnectionDB connectionDB = new ConnectionDB();
                 connectionDB.InsertIntoAutosaloonTable(
-                                                    parserAutoIDTextBox(autoIDTextBox.Texts),
+                                                    ParserAutoIDTextBox(autoIDTextBox.Texts),
                                                     autoBrandTextBox.Texts,
                                                     autoModelTextBox.Texts,
                                                     autoSeriesTextBox.Texts,
                                                     cityLocationTextBox.Texts
                                                     );
             }
-            reloadData();
+            ReloadData();
         }
 
         private void RemoveCarButton_Click(object sender, EventArgs e)
@@ -82,7 +82,7 @@ namespace Autosaloon
             connectionDB.RemoveFromAutosaloonTable(tableCarsGridView);
             try
             {
-                reloadData();
+                ReloadData();
             }
             catch (Exception ex)
             {
@@ -99,16 +99,14 @@ namespace Autosaloon
 
         private void AddNewCarMenu_Load(object sender, EventArgs e)
         {
-            reloadData();
+            ReloadData();
         }
 
-        private void tableCarsGridView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void TableCarsGridView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             EditScreen editScreen = new EditScreen();
             editScreen.dataGridView = tableCarsGridView;
-            
             editScreen.Show();
-            //MessageBox.Show($"{e.RowIndex},{e.ColumnIndex}");
         }
     }
 }

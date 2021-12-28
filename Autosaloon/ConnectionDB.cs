@@ -90,7 +90,14 @@ namespace Autosaloon
             }
         }
 
-        public void EditInAutosaloonTable(DataGridView dataGridView)
+        public void EditInAutosaloonTable(
+            DataGridView dataGridView,
+            int autoID,
+            string autoBrand,
+            string autoModel,
+            string autoSeries,
+            string cityLocation
+            )
         {
             using (connection)
             {
@@ -103,11 +110,11 @@ namespace Autosaloon
                     command.CommandText = "AutoAddOrEdit";
                     command.CommandType = CommandType.StoredProcedure;
                     command.Parameters.AddWithValue("@ID", Convert.ToInt32(dataGridView.CurrentRow.Cells["idColumn"].Value));
-                    command.Parameters.AddWithValue("@AutoID", Convert.ToInt32(dataGridView.CurrentRow.Cells["autoIDColumn"].Value));
-                    command.Parameters.AddWithValue("@AutoBrand", dataGridView.CurrentRow.Cells["autoBrandColumn"].Value.ToString());
-                    command.Parameters.AddWithValue("@AutoModel", dataGridView.CurrentRow.Cells["autoModelColumn"].Value.ToString());
-                    command.Parameters.AddWithValue("@AutoSeries", dataGridView.CurrentRow.Cells["autoSeriesColumn"].Value.ToString());
-                    command.Parameters.AddWithValue("@CityLocation", dataGridView.CurrentRow.Cells["cityLocationColumn"].Value.ToString());
+                    command.Parameters.AddWithValue("@AutoID", autoID);
+                    command.Parameters.AddWithValue("@AutoBrand", autoBrand);
+                    command.Parameters.AddWithValue("@AutoModel", autoModel);
+                    command.Parameters.AddWithValue("@AutoSeries", autoSeries);
+                    command.Parameters.AddWithValue("@CityLocation", cityLocation);
                     command.Connection = connection;
                     command.ExecuteNonQuery();
 
