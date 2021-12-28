@@ -68,16 +68,55 @@ namespace Autosaloon
         {
             using (connection)
             {
-                SqlCommand command = new SqlCommand();
-                connection.Open();
+                if (dataGridView.CurrentRow != null) 
+                {
+                    SqlCommand command = new SqlCommand();
 
-                command.CommandText = "AutoRemove";
-                command.CommandType = CommandType.StoredProcedure;
-                command.Parameters.AddWithValue("@ID", Convert.ToInt32(dataGridView.CurrentRow.Cells["idColumn"].Value));
-                command.Connection = connection;
-                command.ExecuteNonQuery();
+                    connection.Open();
 
-                connection.Close();
+                    command.CommandText = "AutoRemove";
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@ID", Convert.ToInt32(dataGridView.CurrentRow.Cells["idColumn"].Value));
+                    command.Connection = connection;
+                    command.ExecuteNonQuery();
+                    MessageBox.Show("Data has been removed!");
+
+                    connection.Close();
+                }
+                else 
+                {
+                    MessageBox.Show("The table is empty!");
+                }
+            }
+        }
+
+        public void EditInAutosaloonTable(DataGridView dataGridView)
+        {
+            using (connection)
+            {
+                if (dataGridView.CurrentRow != null)
+                {
+                    SqlCommand command = new SqlCommand();
+
+                    connection.Open();
+
+                    command.CommandText = "AutoAddOrEdit";
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@ID", Convert.ToInt32(dataGridView.CurrentRow.Cells["idColumn"].Value));
+                    command.Parameters.AddWithValue("@AutoID", Convert.ToInt32(dataGridView.CurrentRow.Cells["autoIDColumn"].Value));
+                    command.Parameters.AddWithValue("@AutoBrand", dataGridView.CurrentRow.Cells["autoBrandColumn"].Value.ToString());
+                    command.Parameters.AddWithValue("@AutoModel", dataGridView.CurrentRow.Cells["autoModelColumn"].Value.ToString());
+                    command.Parameters.AddWithValue("@AutoSeries", dataGridView.CurrentRow.Cells["autoSeriesColumn"].Value.ToString());
+                    command.Parameters.AddWithValue("@CityLocation", dataGridView.CurrentRow.Cells["cityLocationColumn"].Value.ToString());
+                    command.Connection = connection;
+                    command.ExecuteNonQuery();
+
+                    connection.Close();
+                }
+                else
+                {
+                    MessageBox.Show("The table is empty!");
+                }
             }
         }
     }

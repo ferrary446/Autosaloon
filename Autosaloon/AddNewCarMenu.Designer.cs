@@ -49,9 +49,8 @@
             this.autoSeriesTextBox = new CustomBox.RJControls.RJTextBox();
             this.cityLocationTextBox = new CustomBox.RJControls.RJTextBox();
             this.backToLoginButton = new CustomBox.RJControls.RJButton();
-            this.showAllCarsButton = new CustomBox.RJControls.RJButton();
             this.idColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.autoIDColoumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.autoIDColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.autoBrandColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.autoModelColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.autoSeriesColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -162,7 +161,7 @@
             this.tableCarsGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tableCarsGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idColumn,
-            this.autoIDColoumn,
+            this.autoIDColumn,
             this.autoBrandColumn,
             this.autoModelColumn,
             this.autoSeriesColumn,
@@ -192,6 +191,7 @@
             this.tableCarsGridView.RowTemplate.Height = 25;
             this.tableCarsGridView.Size = new System.Drawing.Size(793, 250);
             this.tableCarsGridView.TabIndex = 10;
+            this.tableCarsGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tableCarsGridView_CellDoubleClick);
             // 
             // editCarButton
             // 
@@ -213,7 +213,6 @@
             this.editCarButton.Text = "Edit";
             this.editCarButton.TextColor = System.Drawing.Color.Black;
             this.editCarButton.UseVisualStyleBackColor = false;
-            this.editCarButton.Click += new System.EventHandler(this.EditCarButton_Click);
             // 
             // label2
             // 
@@ -417,28 +416,6 @@
             this.backToLoginButton.UseVisualStyleBackColor = false;
             this.backToLoginButton.Click += new System.EventHandler(this.BackToLoginButton_Click);
             // 
-            // showAllCarsButton
-            // 
-            this.showAllCarsButton.BackColor = System.Drawing.Color.Gold;
-            this.showAllCarsButton.BackgroundColor = System.Drawing.Color.Gold;
-            this.showAllCarsButton.BorderColor = System.Drawing.Color.Black;
-            this.showAllCarsButton.BorderRadius = 20;
-            this.showAllCarsButton.BorderSize = 1;
-            this.showAllCarsButton.FlatAppearance.BorderSize = 0;
-            this.showAllCarsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.showAllCarsButton.Font = new System.Drawing.Font("Impact", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.showAllCarsButton.ForeColor = System.Drawing.Color.Black;
-            this.showAllCarsButton.Location = new System.Drawing.Point(1068, 141);
-            this.showAllCarsButton.MaximumSize = new System.Drawing.Size(112, 34);
-            this.showAllCarsButton.MinimumSize = new System.Drawing.Size(112, 34);
-            this.showAllCarsButton.Name = "showAllCarsButton";
-            this.showAllCarsButton.Size = new System.Drawing.Size(112, 34);
-            this.showAllCarsButton.TabIndex = 23;
-            this.showAllCarsButton.Text = "Show all";
-            this.showAllCarsButton.TextColor = System.Drawing.Color.Black;
-            this.showAllCarsButton.UseVisualStyleBackColor = false;
-            this.showAllCarsButton.Click += new System.EventHandler(this.ShowAllCarsButton_Click);
-            // 
             // idColumn
             // 
             this.idColumn.DataPropertyName = "ID";
@@ -447,13 +424,13 @@
             this.idColumn.ReadOnly = true;
             this.idColumn.Visible = false;
             // 
-            // autoIDColoumn
+            // autoIDColumn
             // 
-            this.autoIDColoumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.autoIDColoumn.DataPropertyName = "AutoID";
-            this.autoIDColoumn.HeaderText = "Auto ID";
-            this.autoIDColoumn.Name = "autoIDColoumn";
-            this.autoIDColoumn.ReadOnly = true;
+            this.autoIDColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.autoIDColumn.DataPropertyName = "AutoID";
+            this.autoIDColumn.HeaderText = "Auto ID";
+            this.autoIDColumn.Name = "autoIDColumn";
+            this.autoIDColumn.ReadOnly = true;
             // 
             // autoBrandColumn
             // 
@@ -493,7 +470,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.ClientSize = new System.Drawing.Size(1218, 573);
-            this.Controls.Add(this.showAllCarsButton);
             this.Controls.Add(this.backToLoginButton);
             this.Controls.Add(this.cityLocationTextBox);
             this.Controls.Add(this.autoSeriesTextBox);
@@ -518,6 +494,7 @@
             this.Name = "AddNewCarMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddNewCarMenu";
+            this.Load += new System.EventHandler(this.AddNewCarMenu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tableCarsGridView)).EndInit();
             this.ResumeLayout(false);
@@ -544,9 +521,8 @@
         private CustomBox.RJControls.RJTextBox autoSeriesTextBox;
         private CustomBox.RJControls.RJTextBox cityLocationTextBox;
         private CustomBox.RJControls.RJButton backToLoginButton;
-        private CustomBox.RJControls.RJButton showAllCarsButton;
         private System.Windows.Forms.DataGridViewTextBoxColumn idColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn autoIDColoumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn autoIDColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn autoBrandColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn autoModelColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn autoSeriesColumn;

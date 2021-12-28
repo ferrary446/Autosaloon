@@ -53,6 +53,13 @@ namespace Autosaloon
             return id;
         }
 
+        public void reloadData()
+        {
+            ConnectionDB connectionDB = new ConnectionDB();
+            DataTable dataTable = connectionDB.GetDataTableFromQuery("AutosaloonTable");
+            tableCarsGridView.DataSource = dataTable;
+        }
+
         private void AddCarButton_Click(object sender, EventArgs e)
         {
             if (textBoxDataChecked())
@@ -66,17 +73,21 @@ namespace Autosaloon
                                                     cityLocationTextBox.Texts
                                                     );
             }
-        }
-
-        private void EditCarButton_Click(object sender, EventArgs e)
-        {
-            
+            reloadData();
         }
 
         private void RemoveCarButton_Click(object sender, EventArgs e)
         {
             ConnectionDB connectionDB = new ConnectionDB();
             connectionDB.RemoveFromAutosaloonTable(tableCarsGridView);
+            try
+            {
+                reloadData();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
         }
 
         private void BackToLoginButton_Click(object sender, EventArgs e)
@@ -86,11 +97,18 @@ namespace Autosaloon
             Hide();
         }
 
-        private void ShowAllCarsButton_Click(object sender, EventArgs e)
+        private void AddNewCarMenu_Load(object sender, EventArgs e)
         {
-            ConnectionDB connectionDB = new ConnectionDB();
-            DataTable dataTable = connectionDB.GetDataTableFromQuery("AutosaloonTable");
-            tableCarsGridView.DataSource = dataTable;
+            reloadData();
+        }
+
+        private void tableCarsGridView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            EditScreen editScreen = new EditScreen();
+            editScreen.dataGridView = tableCarsGridView;
+            
+            editScreen.Show();
+            //MessageBox.Show($"{e.RowIndex},{e.ColumnIndex}");
         }
     }
 }
