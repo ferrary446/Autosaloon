@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace Autosaloon
 {
-    public partial class EditScreen : Form
+    public partial class EditScreen : Form, ControlAndReloadFunctions
     {
         public DataGridView dataGridView = new DataGridView();
         public EditScreen()
         {
             InitializeComponent();
         }
-        private bool TextBoxDataChecked()
+        public bool TextBoxDataChecked()
         {
             bool checker = false;
 
@@ -36,7 +36,7 @@ namespace Autosaloon
 
             return checker;
         }
-        private int ParserAutoIDTextBox(string parseText)
+        public int ParserAutoIDTextBox(string parseText)
         {
             int id = 0;
 
@@ -51,7 +51,7 @@ namespace Autosaloon
 
             return id;
         }
-        private void ReloadData()
+        public void ReloadData()
         {
             ConnectionDB connectionDB = new ConnectionDB();
             DataTable dataTable = connectionDB.GetDataTableFromQuery("AutosaloonTable");
