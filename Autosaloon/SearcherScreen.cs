@@ -14,9 +14,9 @@ namespace Autosaloon
 
         private void AutoSearcher_Load(object sender, EventArgs e)
         {
-//            rjComboBox1.DataSource = GetDataTableFromQuery().Tables[0];
-//            rjComboBox1.DisplayMember = "AutoBrand";
-//            rjComboBox1.ValueMember = "AutoID";
+            ConnectionDB connectionDB = new ConnectionDB();
+            brandComboBox.DataSource = connectionDB.GetAutoBrandsFromQuery();
+            brandComboBox.DisplayMember = "AutoBrand";
         }
 
         private void BackToLoginButton_Click(object sender, EventArgs e)
@@ -29,6 +29,7 @@ namespace Autosaloon
         private void CloseButtonInSearcher_Click(object sender, EventArgs e)
         {
             Hide();
+            Application.Exit();
         }
     }
 }

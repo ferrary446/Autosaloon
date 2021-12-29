@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.rjButton1 = new CustomBox.RJControls.RJButton();
-            this.rjComboBox1 = new CustomBox.RJControls.RJComboBox();
+            this.brandComboBox = new CustomBox.RJControls.RJComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.rjComboBox2 = new CustomBox.RJControls.RJComboBox();
+            this.modelComboBox = new CustomBox.RJControls.RJComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.rjComboBox3 = new CustomBox.RJControls.RJComboBox();
+            this.seriesComboBox = new CustomBox.RJControls.RJComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.rjComboBox4 = new CustomBox.RJControls.RJComboBox();
+            this.locationComboBox = new CustomBox.RJControls.RJComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.rjProgressBar1 = new CustomBox.RJControls.RJProgressBar();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -66,25 +66,25 @@
             this.rjButton1.TextColor = System.Drawing.Color.Black;
             this.rjButton1.UseVisualStyleBackColor = false;
             // 
-            // rjComboBox1
+            // brandComboBox
             // 
-            this.rjComboBox1.BackColor = System.Drawing.Color.Gold;
-            this.rjComboBox1.BorderColor = System.Drawing.Color.Gold;
-            this.rjComboBox1.BorderSize = 1;
-            this.rjComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.rjComboBox1.Font = new System.Drawing.Font("Impact", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.rjComboBox1.ForeColor = System.Drawing.Color.Black;
-            this.rjComboBox1.IconColor = System.Drawing.Color.Black;
-            this.rjComboBox1.ListBackColor = System.Drawing.Color.DarkSlateBlue;
-            this.rjComboBox1.ListTextColor = System.Drawing.Color.WhiteSmoke;
-            this.rjComboBox1.Location = new System.Drawing.Point(731, -1);
-            this.rjComboBox1.MaximumSize = new System.Drawing.Size(341, 54);
-            this.rjComboBox1.MinimumSize = new System.Drawing.Size(341, 54);
-            this.rjComboBox1.Name = "rjComboBox1";
-            this.rjComboBox1.Padding = new System.Windows.Forms.Padding(1);
-            this.rjComboBox1.Size = new System.Drawing.Size(341, 54);
-            this.rjComboBox1.TabIndex = 1;
-            this.rjComboBox1.Texts = "";
+            this.brandComboBox.BackColor = System.Drawing.Color.Gold;
+            this.brandComboBox.BorderColor = System.Drawing.Color.Gold;
+            this.brandComboBox.BorderSize = 1;
+            this.brandComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.brandComboBox.Font = new System.Drawing.Font("Impact", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.brandComboBox.ForeColor = System.Drawing.Color.Black;
+            this.brandComboBox.IconColor = System.Drawing.Color.Black;
+            this.brandComboBox.ListBackColor = System.Drawing.Color.DarkSlateBlue;
+            this.brandComboBox.ListTextColor = System.Drawing.Color.WhiteSmoke;
+            this.brandComboBox.Location = new System.Drawing.Point(731, -1);
+            this.brandComboBox.MaximumSize = new System.Drawing.Size(341, 54);
+            this.brandComboBox.MinimumSize = new System.Drawing.Size(341, 54);
+            this.brandComboBox.Name = "brandComboBox";
+            this.brandComboBox.Padding = new System.Windows.Forms.Padding(1);
+            this.brandComboBox.Size = new System.Drawing.Size(341, 54);
+            this.brandComboBox.TabIndex = 1;
+            this.brandComboBox.Texts = "";
             // 
             // label1
             // 
@@ -101,25 +101,25 @@
             this.label1.Text = "Please choose the car brand";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // rjComboBox2
+            // modelComboBox
             // 
-            this.rjComboBox2.BackColor = System.Drawing.Color.Gold;
-            this.rjComboBox2.BorderColor = System.Drawing.Color.Gold;
-            this.rjComboBox2.BorderSize = 1;
-            this.rjComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.rjComboBox2.Font = new System.Drawing.Font("Impact", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.rjComboBox2.ForeColor = System.Drawing.Color.Black;
-            this.rjComboBox2.IconColor = System.Drawing.Color.Black;
-            this.rjComboBox2.ListBackColor = System.Drawing.Color.DarkSlateBlue;
-            this.rjComboBox2.ListTextColor = System.Drawing.Color.WhiteSmoke;
-            this.rjComboBox2.Location = new System.Drawing.Point(731, 53);
-            this.rjComboBox2.MaximumSize = new System.Drawing.Size(341, 54);
-            this.rjComboBox2.MinimumSize = new System.Drawing.Size(341, 54);
-            this.rjComboBox2.Name = "rjComboBox2";
-            this.rjComboBox2.Padding = new System.Windows.Forms.Padding(1);
-            this.rjComboBox2.Size = new System.Drawing.Size(341, 54);
-            this.rjComboBox2.TabIndex = 1;
-            this.rjComboBox2.Texts = "";
+            this.modelComboBox.BackColor = System.Drawing.Color.Gold;
+            this.modelComboBox.BorderColor = System.Drawing.Color.Gold;
+            this.modelComboBox.BorderSize = 1;
+            this.modelComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.modelComboBox.Font = new System.Drawing.Font("Impact", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.modelComboBox.ForeColor = System.Drawing.Color.Black;
+            this.modelComboBox.IconColor = System.Drawing.Color.Black;
+            this.modelComboBox.ListBackColor = System.Drawing.Color.DarkSlateBlue;
+            this.modelComboBox.ListTextColor = System.Drawing.Color.WhiteSmoke;
+            this.modelComboBox.Location = new System.Drawing.Point(731, 53);
+            this.modelComboBox.MaximumSize = new System.Drawing.Size(341, 54);
+            this.modelComboBox.MinimumSize = new System.Drawing.Size(341, 54);
+            this.modelComboBox.Name = "modelComboBox";
+            this.modelComboBox.Padding = new System.Windows.Forms.Padding(1);
+            this.modelComboBox.Size = new System.Drawing.Size(341, 54);
+            this.modelComboBox.TabIndex = 1;
+            this.modelComboBox.Texts = "";
             // 
             // label2
             // 
@@ -136,24 +136,24 @@
             this.label2.Text = "Please choose location";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // rjComboBox3
+            // seriesComboBox
             // 
-            this.rjComboBox3.BackColor = System.Drawing.Color.Gold;
-            this.rjComboBox3.BorderColor = System.Drawing.Color.Gold;
-            this.rjComboBox3.BorderSize = 1;
-            this.rjComboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.rjComboBox3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.rjComboBox3.ForeColor = System.Drawing.Color.DimGray;
-            this.rjComboBox3.IconColor = System.Drawing.Color.Black;
-            this.rjComboBox3.ListBackColor = System.Drawing.Color.DarkSlateBlue;
-            this.rjComboBox3.ListTextColor = System.Drawing.Color.WhiteSmoke;
-            this.rjComboBox3.Location = new System.Drawing.Point(731, 107);
-            this.rjComboBox3.MinimumSize = new System.Drawing.Size(341, 54);
-            this.rjComboBox3.Name = "rjComboBox3";
-            this.rjComboBox3.Padding = new System.Windows.Forms.Padding(1);
-            this.rjComboBox3.Size = new System.Drawing.Size(341, 54);
-            this.rjComboBox3.TabIndex = 1;
-            this.rjComboBox3.Texts = "";
+            this.seriesComboBox.BackColor = System.Drawing.Color.Gold;
+            this.seriesComboBox.BorderColor = System.Drawing.Color.Gold;
+            this.seriesComboBox.BorderSize = 1;
+            this.seriesComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.seriesComboBox.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.seriesComboBox.ForeColor = System.Drawing.Color.DimGray;
+            this.seriesComboBox.IconColor = System.Drawing.Color.Black;
+            this.seriesComboBox.ListBackColor = System.Drawing.Color.DarkSlateBlue;
+            this.seriesComboBox.ListTextColor = System.Drawing.Color.WhiteSmoke;
+            this.seriesComboBox.Location = new System.Drawing.Point(731, 107);
+            this.seriesComboBox.MinimumSize = new System.Drawing.Size(341, 54);
+            this.seriesComboBox.Name = "seriesComboBox";
+            this.seriesComboBox.Padding = new System.Windows.Forms.Padding(1);
+            this.seriesComboBox.Size = new System.Drawing.Size(341, 54);
+            this.seriesComboBox.TabIndex = 1;
+            this.seriesComboBox.Texts = "";
             // 
             // label3
             // 
@@ -170,25 +170,25 @@
             this.label3.Text = "Please choose the model";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // rjComboBox4
+            // locationComboBox
             // 
-            this.rjComboBox4.BackColor = System.Drawing.Color.Gold;
-            this.rjComboBox4.BorderColor = System.Drawing.Color.Gold;
-            this.rjComboBox4.BorderSize = 1;
-            this.rjComboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.rjComboBox4.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.rjComboBox4.ForeColor = System.Drawing.Color.DimGray;
-            this.rjComboBox4.IconColor = System.Drawing.Color.Black;
-            this.rjComboBox4.ListBackColor = System.Drawing.Color.DarkSlateBlue;
-            this.rjComboBox4.ListTextColor = System.Drawing.Color.WhiteSmoke;
-            this.rjComboBox4.Location = new System.Drawing.Point(731, 161);
-            this.rjComboBox4.MaximumSize = new System.Drawing.Size(341, 54);
-            this.rjComboBox4.MinimumSize = new System.Drawing.Size(341, 54);
-            this.rjComboBox4.Name = "rjComboBox4";
-            this.rjComboBox4.Padding = new System.Windows.Forms.Padding(1);
-            this.rjComboBox4.Size = new System.Drawing.Size(341, 54);
-            this.rjComboBox4.TabIndex = 1;
-            this.rjComboBox4.Texts = "";
+            this.locationComboBox.BackColor = System.Drawing.Color.Gold;
+            this.locationComboBox.BorderColor = System.Drawing.Color.Gold;
+            this.locationComboBox.BorderSize = 1;
+            this.locationComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.locationComboBox.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.locationComboBox.ForeColor = System.Drawing.Color.DimGray;
+            this.locationComboBox.IconColor = System.Drawing.Color.Black;
+            this.locationComboBox.ListBackColor = System.Drawing.Color.DarkSlateBlue;
+            this.locationComboBox.ListTextColor = System.Drawing.Color.WhiteSmoke;
+            this.locationComboBox.Location = new System.Drawing.Point(731, 161);
+            this.locationComboBox.MaximumSize = new System.Drawing.Size(341, 54);
+            this.locationComboBox.MinimumSize = new System.Drawing.Size(341, 54);
+            this.locationComboBox.Name = "locationComboBox";
+            this.locationComboBox.Padding = new System.Windows.Forms.Padding(1);
+            this.locationComboBox.Size = new System.Drawing.Size(341, 54);
+            this.locationComboBox.TabIndex = 1;
+            this.locationComboBox.Texts = "";
             // 
             // label4
             // 
@@ -214,14 +214,16 @@
             this.rjProgressBar1.ForeBackColor = System.Drawing.Color.Gold;
             this.rjProgressBar1.ForeColor = System.Drawing.Color.Black;
             this.rjProgressBar1.Location = new System.Drawing.Point(418, 288);
+            this.rjProgressBar1.Maximum = 20;
             this.rjProgressBar1.MaximumSize = new System.Drawing.Size(654, 32);
             this.rjProgressBar1.MinimumSize = new System.Drawing.Size(654, 32);
             this.rjProgressBar1.Name = "rjProgressBar1";
-            this.rjProgressBar1.ShowMaximun = false;
+            this.rjProgressBar1.ShowMaximun = true;
             this.rjProgressBar1.ShowValue = CustomBox.RJControls.TextPosition.Right;
             this.rjProgressBar1.Size = new System.Drawing.Size(654, 32);
             this.rjProgressBar1.SliderColor = System.Drawing.Color.RoyalBlue;
             this.rjProgressBar1.SliderHeight = 6;
+            this.rjProgressBar1.Step = 1;
             this.rjProgressBar1.SymbolAfter = "";
             this.rjProgressBar1.SymbolBefore = "";
             this.rjProgressBar1.TabIndex = 3;
@@ -301,7 +303,7 @@
             // 
             // AutoSearcher
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 28F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.ClientSize = new System.Drawing.Size(1072, 625);
@@ -313,11 +315,11 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.rjComboBox4);
-            this.Controls.Add(this.rjComboBox3);
+            this.Controls.Add(this.locationComboBox);
+            this.Controls.Add(this.seriesComboBox);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.rjComboBox2);
-            this.Controls.Add(this.rjComboBox1);
+            this.Controls.Add(this.modelComboBox);
+            this.Controls.Add(this.brandComboBox);
             this.Controls.Add(this.rjButton1);
             this.Font = new System.Drawing.Font("Century", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -337,13 +339,13 @@
         #endregion
 
         private CustomBox.RJControls.RJButton rjButton1;
-        private CustomBox.RJControls.RJComboBox rjComboBox1;
+        private CustomBox.RJControls.RJComboBox brandComboBox;
         private System.Windows.Forms.Label label1;
-        private CustomBox.RJControls.RJComboBox rjComboBox2;
+        private CustomBox.RJControls.RJComboBox modelComboBox;
         private System.Windows.Forms.Label label2;
-        private CustomBox.RJControls.RJComboBox rjComboBox3;
+        private CustomBox.RJControls.RJComboBox seriesComboBox;
         private System.Windows.Forms.Label label3;
-        private CustomBox.RJControls.RJComboBox rjComboBox4;
+        private CustomBox.RJControls.RJComboBox locationComboBox;
         private System.Windows.Forms.Label label4;
         private CustomBox.RJControls.RJProgressBar rjProgressBar1;
         private System.Windows.Forms.PictureBox pictureBox1;

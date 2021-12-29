@@ -36,6 +36,28 @@ namespace Autosaloon
             }
         }
 
+        public DataTable GetAutoBrandsFromQuery()
+        {
+            using (connection)
+            {
+                SqlCommand command = new SqlCommand();
+
+                connection.Open();
+
+                command.CommandText = $"SELECT DISTINCT AutoBrand FROM AutosaloonTable";
+                command.Connection = connection;
+
+                SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
+                DataTable dataTable = new DataTable();
+                dataAdapter.Fill(dataTable);
+                command.ExecuteNonQuery();
+
+                connection.Close();
+
+                return dataTable;
+            }
+        }
+
         public void InsertIntoAutosaloonTable(
             int autoID, 
             string autoBrand, 

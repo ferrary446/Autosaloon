@@ -34,6 +34,7 @@ namespace Autosaloon
         private void ExitButton_Click(object sender, EventArgs e)
         {
             Hide();
+            Application.Exit();
         }
     }
 }
