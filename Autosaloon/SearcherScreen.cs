@@ -52,12 +52,24 @@ namespace Autosaloon
 
             if (autoModel != null)
             {
-                ConnectionDB connectionModelDB = new ConnectionDB();
-                seriesComboBox.DataSource = connectionModelDB.GetAutoSeriesFromQuery(autoModel);
+                ConnectionDB connectionDB = new ConnectionDB();
+                seriesComboBox.DataSource = connectionDB.GetAutoSeriesFromQuery(autoModel);
                 seriesComboBox.DisplayMember = "AutoSeries";
+            }
+        }
 
-                ConnectionDB connectionLocationDB = new ConnectionDB();
-                locationComboBox.DataSource = connectionLocationDB.GetCityLocationFromQuery(autoModel);
+        private void seriesComboBox_OnSelectedIndexChanged(object sender, EventArgs e)
+        {
+            DataRowView selectedBrand = ((DataRowView)brandComboBox.SelectedItem);
+            string? autoBrand = selectedBrand.Row["AutoBrand"].ToString();
+
+            DataRowView selectedSeries = ((DataRowView)seriesComboBox.SelectedItem);
+            string? autoSeries = selectedSeries.Row["AutoSeries"].ToString();
+
+            if (autoBrand != null && autoSeries != null)
+            {
+                ConnectionDB connectionDB = new ConnectionDB();
+                locationComboBox.DataSource =  connectionDB.GetCityLocationFromQuery(autoBrand, autoSeries);
                 locationComboBox.DisplayMember = "CityLocation";
             }
         }

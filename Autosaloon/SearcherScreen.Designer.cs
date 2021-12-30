@@ -156,6 +156,7 @@
             this.seriesComboBox.Size = new System.Drawing.Size(341, 54);
             this.seriesComboBox.TabIndex = 1;
             this.seriesComboBox.Texts = "";
+            this.seriesComboBox.OnSelectedIndexChanged += new System.EventHandler(this.seriesComboBox_OnSelectedIndexChanged);
             // 
             // label3
             // 
@@ -305,7 +306,7 @@
             // 
             // AutoSearcher
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.ClientSize = new System.Drawing.Size(1072, 625);

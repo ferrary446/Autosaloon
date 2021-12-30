@@ -102,7 +102,7 @@ namespace Autosaloon
             }
         }
 
-        public DataTable GetCityLocationFromQuery(string autoModel)
+        public DataTable GetCityLocationFromQuery(string autoBrand, string autoSeries)
         {
             using (connection)
             {
@@ -110,7 +110,8 @@ namespace Autosaloon
 
                 connection.Open();
 
-                command.CommandText = $"SELECT DISTINCT CityLocation FROM AutosaloonTable WHERE AutoModel = '{autoModel}'";
+                command.CommandText = $"SELECT DISTINCT CityLocation FROM AutosaloonTable " +
+                    $"WHERE AutoBrand = '{autoBrand}' AND AutoSeries = '{autoSeries}'";
                 command.Connection = connection;
 
                 SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
