@@ -85,6 +85,7 @@
             this.brandComboBox.Size = new System.Drawing.Size(341, 54);
             this.brandComboBox.TabIndex = 1;
             this.brandComboBox.Texts = "";
+            this.brandComboBox.OnSelectedIndexChanged += new System.EventHandler(this.brandComboBox_OnSelectedIndexChanged);
             // 
             // label1
             // 
@@ -120,6 +121,7 @@
             this.modelComboBox.Size = new System.Drawing.Size(341, 54);
             this.modelComboBox.TabIndex = 1;
             this.modelComboBox.Texts = "";
+            this.modelComboBox.OnSelectedIndexChanged += new System.EventHandler(this.modelComboBox_OnSelectedIndexChanged);
             // 
             // label2
             // 
@@ -142,8 +144,8 @@
             this.seriesComboBox.BorderColor = System.Drawing.Color.Gold;
             this.seriesComboBox.BorderSize = 1;
             this.seriesComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.seriesComboBox.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.seriesComboBox.ForeColor = System.Drawing.Color.DimGray;
+            this.seriesComboBox.Font = new System.Drawing.Font("Impact", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.seriesComboBox.ForeColor = System.Drawing.Color.Black;
             this.seriesComboBox.IconColor = System.Drawing.Color.Black;
             this.seriesComboBox.ListBackColor = System.Drawing.Color.DarkSlateBlue;
             this.seriesComboBox.ListTextColor = System.Drawing.Color.WhiteSmoke;
@@ -176,8 +178,8 @@
             this.locationComboBox.BorderColor = System.Drawing.Color.Gold;
             this.locationComboBox.BorderSize = 1;
             this.locationComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.locationComboBox.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.locationComboBox.ForeColor = System.Drawing.Color.DimGray;
+            this.locationComboBox.Font = new System.Drawing.Font("Impact", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.locationComboBox.ForeColor = System.Drawing.Color.Black;
             this.locationComboBox.IconColor = System.Drawing.Color.Black;
             this.locationComboBox.ListBackColor = System.Drawing.Color.DarkSlateBlue;
             this.locationComboBox.ListTextColor = System.Drawing.Color.WhiteSmoke;

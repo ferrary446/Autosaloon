@@ -31,5 +31,35 @@ namespace Autosaloon
             Hide();
             Application.Exit();
         }
+
+        private void brandComboBox_OnSelectedIndexChanged(object sender, EventArgs e)
+        {
+            DataRowView selectedItem = ((DataRowView)brandComboBox.SelectedItem);
+            string? autoBrand = selectedItem.Row["AutoBrand"].ToString();
+
+            if (autoBrand != null)
+            {
+                ConnectionDB connectionDB = new ConnectionDB();
+                modelComboBox.DataSource = connectionDB.GetAutoModelsFromQuery(autoBrand);
+                modelComboBox.DisplayMember = "AutoModel";
+            }
+        }
+
+        private void modelComboBox_OnSelectedIndexChanged(object sender, EventArgs e)
+        {
+            DataRowView selectedItem = ((DataRowView)modelComboBox.SelectedItem);
+            string? autoModel = selectedItem.Row["AutoModel"].ToString();
+
+            if (autoModel != null)
+            {
+                ConnectionDB connectionModelDB = new ConnectionDB();
+                seriesComboBox.DataSource = connectionModelDB.GetAutoSeriesFromQuery(autoModel);
+                seriesComboBox.DisplayMember = "AutoSeries";
+
+                ConnectionDB connectionLocationDB = new ConnectionDB();
+                locationComboBox.DataSource = connectionLocationDB.GetCityLocationFromQuery(autoModel);
+                locationComboBox.DisplayMember = "CityLocation";
+            }
+        }
     }
 }

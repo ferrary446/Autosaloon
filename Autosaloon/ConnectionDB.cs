@@ -44,7 +44,73 @@ namespace Autosaloon
 
                 connection.Open();
 
-                command.CommandText = $"SELECT DISTINCT AutoBrand FROM AutosaloonTable";
+                command.CommandText = "SELECT DISTINCT AutoBrand FROM AutosaloonTable";
+                command.Connection = connection;
+
+                SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
+                DataTable dataTable = new DataTable();
+                dataAdapter.Fill(dataTable);
+                command.ExecuteNonQuery();
+
+                connection.Close();
+
+                return dataTable;
+            }
+        }
+
+        public DataTable GetAutoModelsFromQuery(string autoBrand)
+        {
+            using (connection)
+            {
+                SqlCommand command = new SqlCommand();
+
+                connection.Open();
+
+                command.CommandText = $"SELECT DISTINCT AutoModel FROM AutosaloonTable WHERE AutoBrand = '{autoBrand}'";
+                command.Connection = connection;
+
+                SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
+                DataTable dataTable = new DataTable();
+                dataAdapter.Fill(dataTable);
+                command.ExecuteNonQuery();
+
+                connection.Close();
+
+                return dataTable;
+            }
+        }
+
+        public DataTable GetAutoSeriesFromQuery(string autoModel)
+        {
+            using (connection)
+            {
+                SqlCommand command = new SqlCommand();
+
+                connection.Open();
+
+                command.CommandText = $"SELECT DISTINCT AutoSeries FROM AutosaloonTable WHERE AutoModel = '{autoModel}'";
+                command.Connection = connection;
+
+                SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
+                DataTable dataTable = new DataTable();
+                dataAdapter.Fill(dataTable);
+                command.ExecuteNonQuery();
+
+                connection.Close();
+
+                return dataTable;
+            }
+        }
+
+        public DataTable GetCityLocationFromQuery(string autoModel)
+        {
+            using (connection)
+            {
+                SqlCommand command = new SqlCommand();
+
+                connection.Open();
+
+                command.CommandText = $"SELECT DISTINCT CityLocation FROM AutosaloonTable WHERE AutoModel = '{autoModel}'";
                 command.Connection = connection;
 
                 SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
