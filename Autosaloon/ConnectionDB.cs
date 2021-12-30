@@ -69,12 +69,16 @@ namespace Autosaloon
 
                 connection.Open();
 
-                command.CommandText = $"SELECT DISTINCT AutoModel FROM AutosaloonTable WHERE AutoBrand = '{autoBrand}'";
+                command.CommandText = $"SELECT DISTINCT AutoModel FROM AutosaloonTable " +
+                    $"WHERE AutoBrand = '{autoBrand}'";
                 command.Connection = connection;
 
                 SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
                 DataTable dataTable = new DataTable();
                 dataAdapter.Fill(dataTable);
+                DataRow topRow = dataTable.NewRow();
+                topRow[0] = "Select model";
+                dataTable.Rows.InsertAt(topRow, 0);
                 command.ExecuteNonQuery();
 
                 connection.Close();
@@ -91,13 +95,16 @@ namespace Autosaloon
 
                 connection.Open();
 
-                command.CommandText = $"SELECT DISTINCT AutoSeries FROM AutosaloonTable WHERE " +
-                    $"AutoModel = '{autoModel}'";
+                command.CommandText = $"SELECT DISTINCT AutoSeries FROM AutosaloonTable " +
+                    $"WHERE AutoModel = '{autoModel}'";
                 command.Connection = connection;
 
                 SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
                 DataTable dataTable = new DataTable();
                 dataAdapter.Fill(dataTable);
+                DataRow topRow = dataTable.NewRow();
+                topRow[0] = "Select series";
+                dataTable.Rows.InsertAt(topRow, 0);
                 command.ExecuteNonQuery();
 
                 connection.Close();
@@ -106,7 +113,7 @@ namespace Autosaloon
             }
         }
 
-        public DataTable GetCityLocationFromQuery(string autoBrand, string autoSeries)
+        public DataTable GetCityLocationFromQuery(string autoModel, string autoSeries)
         {
             using (connection)
             {
@@ -115,7 +122,32 @@ namespace Autosaloon
                 connection.Open();
 
                 command.CommandText = $"SELECT DISTINCT CityLocation FROM AutosaloonTable " +
-                    $"WHERE AutoBrand = '{autoBrand}' AND AutoSeries = '{autoSeries}'";
+                    $"WHERE AutoModel = '{autoModel}' AND AutoSeries = '{autoSeries}'";
+                command.Connection = connection;
+
+                SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
+                DataTable dataTable = new DataTable();
+                dataAdapter.Fill(dataTable);
+                DataRow topRow = dataTable.NewRow();
+                topRow[0] = "Select city";
+                dataTable.Rows.InsertAt(topRow, 0);
+                command.ExecuteNonQuery();
+
+                connection.Close();
+
+                return dataTable;
+            }
+        }
+
+        public int GetCountModelsFromQuery()
+        {
+            using (connection)
+            {
+                SqlCommand command = new SqlCommand();
+
+                connection.Open();
+
+                command.CommandText = "SELECT AutoModel FROM AutosaloonTable";
                 command.Connection = connection;
 
                 SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
@@ -125,13 +157,34 @@ namespace Autosaloon
 
                 connection.Close();
 
-                return dataTable;
+                return dataTable.Rows.Count;
             }
         }
 
-        public int GetCountFromQuery()
+        public int GetCountModelsByRange(
+            string firstParametr, 
+            string secondParametr,
+            string valueForWhere,
+            string? optionalParametr = null
+            )
         {
+            SqlCommand command = new SqlCommand();
 
+            connection.Open();
+
+            command.CommandText = $"SELECT {firstParametr} FROM AutosaloonTable " +
+                $"WHERE {secondParametr} = '{valueForWhere}'" +
+                optionalParametr;
+            command.Connection = connection;
+
+            SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
+            DataTable dataTable = new DataTable();
+            dataAdapter.Fill(dataTable);
+            command.ExecuteNonQuery();
+
+            connection.Close();
+
+            return dataTable.Rows.Count;
         }
 
         public void InsertIntoAutosaloonTable(
