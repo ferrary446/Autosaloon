@@ -37,7 +37,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.locationComboBox = new CustomBox.RJControls.RJComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.rjProgressBar1 = new CustomBox.RJControls.RJProgressBar();
+            this.countProgressBar = new CustomBox.RJControls.RJProgressBar();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.backToLoginButton = new CustomBox.RJControls.RJButton();
@@ -208,28 +208,28 @@
             this.label4.Text = "Please choose series";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // rjProgressBar1
+            // countProgressBar
             // 
-            this.rjProgressBar1.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.rjProgressBar1.ChannelColor = System.Drawing.Color.Gold;
-            this.rjProgressBar1.ChannelHeight = 6;
-            this.rjProgressBar1.Font = new System.Drawing.Font("Impact", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.rjProgressBar1.ForeBackColor = System.Drawing.Color.Gold;
-            this.rjProgressBar1.ForeColor = System.Drawing.Color.Black;
-            this.rjProgressBar1.Location = new System.Drawing.Point(418, 288);
-            this.rjProgressBar1.Maximum = 20;
-            this.rjProgressBar1.MaximumSize = new System.Drawing.Size(654, 32);
-            this.rjProgressBar1.MinimumSize = new System.Drawing.Size(654, 32);
-            this.rjProgressBar1.Name = "rjProgressBar1";
-            this.rjProgressBar1.ShowMaximun = true;
-            this.rjProgressBar1.ShowValue = CustomBox.RJControls.TextPosition.Right;
-            this.rjProgressBar1.Size = new System.Drawing.Size(654, 32);
-            this.rjProgressBar1.SliderColor = System.Drawing.Color.RoyalBlue;
-            this.rjProgressBar1.SliderHeight = 6;
-            this.rjProgressBar1.Step = 1;
-            this.rjProgressBar1.SymbolAfter = "";
-            this.rjProgressBar1.SymbolBefore = "";
-            this.rjProgressBar1.TabIndex = 3;
+            this.countProgressBar.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.countProgressBar.ChannelColor = System.Drawing.Color.Gold;
+            this.countProgressBar.ChannelHeight = 6;
+            this.countProgressBar.Font = new System.Drawing.Font("Impact", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.countProgressBar.ForeBackColor = System.Drawing.Color.Gold;
+            this.countProgressBar.ForeColor = System.Drawing.Color.Black;
+            this.countProgressBar.Location = new System.Drawing.Point(418, 288);
+            this.countProgressBar.Maximum = 20;
+            this.countProgressBar.MaximumSize = new System.Drawing.Size(654, 32);
+            this.countProgressBar.MinimumSize = new System.Drawing.Size(654, 32);
+            this.countProgressBar.Name = "countProgressBar";
+            this.countProgressBar.ShowMaximun = true;
+            this.countProgressBar.ShowValue = CustomBox.RJControls.TextPosition.Right;
+            this.countProgressBar.Size = new System.Drawing.Size(654, 32);
+            this.countProgressBar.SliderColor = System.Drawing.Color.Red;
+            this.countProgressBar.SliderHeight = 6;
+            this.countProgressBar.Step = 1;
+            this.countProgressBar.SymbolAfter = "";
+            this.countProgressBar.SymbolBefore = "";
+            this.countProgressBar.TabIndex = 3;
             // 
             // pictureBox1
             // 
@@ -314,7 +314,7 @@
             this.Controls.Add(this.backToLoginButton);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.rjProgressBar1);
+            this.Controls.Add(this.countProgressBar);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -350,7 +350,7 @@
         private System.Windows.Forms.Label label3;
         private CustomBox.RJControls.RJComboBox locationComboBox;
         private System.Windows.Forms.Label label4;
-        private CustomBox.RJControls.RJProgressBar rjProgressBar1;
+        private CustomBox.RJControls.RJProgressBar countProgressBar;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label5;
         private CustomBox.RJControls.RJButton backToLoginButton;

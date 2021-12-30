@@ -50,6 +50,9 @@ namespace Autosaloon
                 SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
                 DataTable dataTable = new DataTable();
                 dataAdapter.Fill(dataTable);
+                DataRow topRow = dataTable.NewRow();
+                topRow[0] = "Select brand";
+                dataTable.Rows.InsertAt(topRow, 0);
                 command.ExecuteNonQuery();
 
                 connection.Close();
@@ -88,7 +91,8 @@ namespace Autosaloon
 
                 connection.Open();
 
-                command.CommandText = $"SELECT DISTINCT AutoSeries FROM AutosaloonTable WHERE AutoModel = '{autoModel}'";
+                command.CommandText = $"SELECT DISTINCT AutoSeries FROM AutosaloonTable WHERE " +
+                    $"AutoModel = '{autoModel}'";
                 command.Connection = connection;
 
                 SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
@@ -123,6 +127,11 @@ namespace Autosaloon
 
                 return dataTable;
             }
+        }
+
+        public int GetCountFromQuery()
+        {
+
         }
 
         public void InsertIntoAutosaloonTable(

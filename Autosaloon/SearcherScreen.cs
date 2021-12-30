@@ -17,6 +17,8 @@ namespace Autosaloon
             ConnectionDB connectionDB = new ConnectionDB();
             brandComboBox.DataSource = connectionDB.GetAutoBrandsFromQuery();
             brandComboBox.DisplayMember = "AutoBrand";
+
+            countProgressBar.Value = 15;
         }
 
         private void BackToLoginButton_Click(object sender, EventArgs e)
