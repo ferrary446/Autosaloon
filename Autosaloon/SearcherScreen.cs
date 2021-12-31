@@ -18,6 +18,9 @@ namespace Autosaloon
             brandComboBox.DataSource = connectionDB.GetAutoBrandsFromQuery();
             brandComboBox.DisplayMember = "AutoBrand";
 
+            ConnectionDB maximumCountConnectionDB = new ConnectionDB();
+            countProgressBar.Maximum = maximumCountConnectionDB.GetCountModelsFromQuery();
+
             ConnectionDB countConnectionDB = new ConnectionDB();
             countProgressBar.Value = countConnectionDB.GetCountModelsFromQuery();
 
