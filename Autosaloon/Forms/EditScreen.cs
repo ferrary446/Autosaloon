@@ -1,22 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Autosaloon
 {
+    // Menu opravy udajů
     public partial class EditScreen : Form, ControlAndReloadFunctions
     {
+        // Tabulka pro obnovu
         public DataGridView dataGridView = new DataGridView();
         public EditScreen()
         {
             InitializeComponent();
         }
+        // Kontrola prázdných hodnot v pole TextBox
         public bool TextBoxDataChecked()
         {
             bool checker = false;
@@ -36,6 +33,7 @@ namespace Autosaloon
 
             return checker;
         }
+        // Kontrola pole AutoID na obsah čísla
         public int ParserAutoIDTextBox(string parseText)
         {
             int id = 0;
@@ -51,16 +49,19 @@ namespace Autosaloon
 
             return id;
         }
+        // Obnova tabulky
         public void ReloadData()
         {
             ConnectionDB connectionDB = new ConnectionDB();
             DataTable dataTable = connectionDB.GetDataTableFromQuery("AutosaloonTable");
             dataGridView.DataSource = dataTable;
         }
+        // Schovat menu bez oprav
         private void CancelEditButton_Click(object sender, EventArgs e)
         {
             Hide();
         }
+        // Schovat menu s opravami
         private void EditCarButton_Click(object sender, EventArgs e)
         {
             if (dataGridView != null)
@@ -81,6 +82,7 @@ namespace Autosaloon
                 }
             }
         }
+        // Obnova dat při spuštění
         private void EditScreen_Load(object sender, EventArgs e)
         {
             if (dataGridView != null)

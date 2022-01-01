@@ -1,6 +1,6 @@
 ﻿namespace Autosaloon
 {
-    partial class AddNewCarMenu
+    partial class AddNewCarScreen
     {
         /// <summary>
         /// Required designer variable.

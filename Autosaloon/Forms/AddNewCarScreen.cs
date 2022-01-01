@@ -1,22 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Autosaloon
 {
-    public partial class AddNewCarMenu : Form, ControlAndReloadFunctions
+    // Menu práce s tabulkou aut
+    public partial class AddNewCarScreen : Form, ControlAndReloadFunctions
     {
-        public AddNewCarMenu()
+        public AddNewCarScreen()
         {
             InitializeComponent();
         }
-
+        // Kontrola prázdných hodnot v pole TextBox 
         public bool TextBoxDataChecked()
         {
             bool checker = false;
@@ -36,7 +31,7 @@ namespace Autosaloon
 
             return checker;
         }
-
+        // Kontrola pole AutoID na obsah čísla
         public int ParserAutoIDTextBox(string parseText)
         {
             int id = 0;
@@ -52,14 +47,14 @@ namespace Autosaloon
 
             return id;
         }
-
+        // Obnova tabulky
         public void ReloadData()
         {
             ConnectionDB connectionDB = new ConnectionDB();
             DataTable dataTable = connectionDB.GetDataTableFromQuery("AutosaloonTable");
             tableCarsGridView.DataSource = dataTable;
         }
-
+        // Tlačitko přidaní nového auta
         private void AddCarButton_Click(object sender, EventArgs e)
         {
             if (TextBoxDataChecked())
@@ -75,7 +70,7 @@ namespace Autosaloon
             }
             ReloadData();
         }
-
+        // Tlačitko vymazaní auta z tabulky
         private void RemoveCarButton_Click(object sender, EventArgs e)
         {
             ConnectionDB connectionDB = new ConnectionDB();
@@ -89,19 +84,19 @@ namespace Autosaloon
                 Console.WriteLine(ex.ToString());
             }
         }
-
+        // Vráceni v okno přihlašení 
         private void BackToLoginButton_Click(object sender, EventArgs e)
         {
             LoginScreen loginScreen = new LoginScreen();
             loginScreen.Show();
             Hide();
         }
-
+        // Obnova dat při spuštění
         private void AddNewCarMenu_Load(object sender, EventArgs e)
         {
             ReloadData();
         }
-
+        // Volaní menu opravy udajů
         private void TableCarsGridView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             EditScreen editScreen = new EditScreen();

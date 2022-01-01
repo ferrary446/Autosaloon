@@ -1,6 +1,6 @@
 ﻿namespace Autosaloon
 {
-    partial class AutoSearcher
+    partial class AutoSearcherScreen
     {
         /// <summary>
         ///  Required designer variable.
@@ -85,7 +85,7 @@
             this.brandComboBox.Size = new System.Drawing.Size(341, 54);
             this.brandComboBox.TabIndex = 1;
             this.brandComboBox.Texts = "";
-            this.brandComboBox.OnSelectedIndexChanged += new System.EventHandler(this.brandComboBox_OnSelectedIndexChanged);
+            this.brandComboBox.OnSelectedIndexChanged += new System.EventHandler(this.BrandComboBox_OnSelectedIndexChanged);
             // 
             // label1
             // 
@@ -121,7 +121,7 @@
             this.modelComboBox.Size = new System.Drawing.Size(341, 54);
             this.modelComboBox.TabIndex = 1;
             this.modelComboBox.Texts = "";
-            this.modelComboBox.OnSelectedIndexChanged += new System.EventHandler(this.modelComboBox_OnSelectedIndexChanged);
+            this.modelComboBox.OnSelectedIndexChanged += new System.EventHandler(this.ModelComboBox_OnSelectedIndexChanged);
             // 
             // label2
             // 
@@ -156,7 +156,7 @@
             this.seriesComboBox.Size = new System.Drawing.Size(341, 54);
             this.seriesComboBox.TabIndex = 1;
             this.seriesComboBox.Texts = "";
-            this.seriesComboBox.OnSelectedIndexChanged += new System.EventHandler(this.seriesComboBox_OnSelectedIndexChanged);
+            this.seriesComboBox.OnSelectedIndexChanged += new System.EventHandler(this.SeriesComboBox_OnSelectedIndexChanged);
             // 
             // label3
             // 
@@ -304,7 +304,7 @@
             this.closeButtonInSearcher.UseVisualStyleBackColor = false;
             this.closeButtonInSearcher.Click += new System.EventHandler(this.CloseButtonInSearcher_Click);
             // 
-            // AutoSearcher
+            // AutoSearcherScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -329,7 +329,7 @@
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.MaximumSize = new System.Drawing.Size(1072, 625);
             this.MinimumSize = new System.Drawing.Size(1072, 625);
-            this.Name = "AutoSearcher";
+            this.Name = "AutoSearcherScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Autosaloon";
             this.TransparencyKey = System.Drawing.Color.DarkOliveGreen;

@@ -1,17 +1,17 @@
 ﻿using System;
 using System.Data;
-using System.Data.SqlClient;
 using System.Windows.Forms;
 
 namespace Autosaloon
 {
-    public partial class AutoSearcher : Form
+    // Menu hledaní aut
+    public partial class AutoSearcherScreen : Form
     {
-        public AutoSearcher()
+        public AutoSearcherScreen()
         {
             InitializeComponent();
         }
-
+        // Obnova dat v menu při spuštění
         private void AutoSearcher_Load(object sender, EventArgs e)
         {
             ConnectionDB connectionDB = new ConnectionDB();
@@ -32,21 +32,21 @@ namespace Autosaloon
                 countProgressBar.ForeBackColor = System.Drawing.Color.Red;
             }
         }
-
+        // Vráceni v menu vyberu uživatěle
         private void BackToLoginButton_Click(object sender, EventArgs e)
         {
             LoginMethodsScreen loginMethodsScreen = new LoginMethodsScreen();
             loginMethodsScreen.Show();
             Hide();
         }
-
+        // Ukončení programy
         private void CloseButtonInSearcher_Click(object sender, EventArgs e)
         {
             Hide();
             Application.Exit();
         }
-
-        private void brandComboBox_OnSelectedIndexChanged(object sender, EventArgs e)
+        // Obnova comboboxu AutoModel při vyberu brandu v comboboxu AutoBrand
+        private void BrandComboBox_OnSelectedIndexChanged(object sender, EventArgs e)
         {
             DataRowView selectedItem = ((DataRowView)brandComboBox.SelectedItem);
             string? autoBrand = selectedItem.Row["AutoBrand"].ToString();
@@ -73,8 +73,8 @@ namespace Autosaloon
                 }
             }
         }
-
-        private void modelComboBox_OnSelectedIndexChanged(object sender, EventArgs e)
+        // Obnova comboboxu AutoSeries při vyberu modelu v comboboxu AutoModel
+        private void ModelComboBox_OnSelectedIndexChanged(object sender, EventArgs e)
         {
             DataRowView selectedItem = ((DataRowView)modelComboBox.SelectedItem);
             string? autoModel = selectedItem.Row["AutoModel"].ToString();
@@ -101,8 +101,11 @@ namespace Autosaloon
                 }
             }
         }
-
-        private void seriesComboBox_OnSelectedIndexChanged(object sender, EventArgs e)
+        /* 
+        Obnova comboboxu CityLocation při vyberu modelu v comboboxu AutoModel
+        a serie v comboboxu AutoSeries
+        */
+        private void SeriesComboBox_OnSelectedIndexChanged(object sender, EventArgs e)
         {
             DataRowView selectedModel = ((DataRowView)modelComboBox.SelectedItem);
             string? autoModel = selectedModel.Row["AutoModel"].ToString();
