@@ -13,7 +13,6 @@ namespace Autosaloon
             $"User ID={LoginData.adminID};" +
             $"Password={LoginData.adminPassword}"
             );
-
         public DataTable GetDataTableFromQuery(string tableName)
         {
             using (connection)
@@ -35,8 +34,12 @@ namespace Autosaloon
                 return dataTable;
             }
         }
-
-        public DataTable GetAutoBrandsFromQuery()
+        public DataTable GetSelectDistinctValueFromQuery(
+            string selectParametr,
+            string tableName,
+            string topRowName,
+            string? firstOptionalParametr = null,
+            string? secondOptionalParametr = null)
         {
             using (connection)
             {
@@ -44,92 +47,17 @@ namespace Autosaloon
 
                 connection.Open();
 
-                command.CommandText = "SELECT DISTINCT AutoBrand FROM AutosaloonTable";
+                command.CommandText = $"SELECT DISTINCT {selectParametr} " +
+                    $"FROM {tableName}" +
+                    $" {firstOptionalParametr}" +
+                    $" {secondOptionalParametr}";
                 command.Connection = connection;
 
                 SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
                 DataTable dataTable = new DataTable();
                 dataAdapter.Fill(dataTable);
                 DataRow topRow = dataTable.NewRow();
-                topRow[0] = "Select brand";
-                dataTable.Rows.InsertAt(topRow, 0);
-                command.ExecuteNonQuery();
-
-                connection.Close();
-
-                return dataTable;
-            }
-        }
-
-        public DataTable GetAutoModelsFromQuery(string autoBrand)
-        {
-            using (connection)
-            {
-                SqlCommand command = new SqlCommand();
-
-                connection.Open();
-
-                command.CommandText = $"SELECT DISTINCT AutoModel FROM AutosaloonTable " +
-                    $"WHERE AutoBrand = '{autoBrand}'";
-                command.Connection = connection;
-
-                SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
-                DataTable dataTable = new DataTable();
-                dataAdapter.Fill(dataTable);
-                DataRow topRow = dataTable.NewRow();
-                topRow[0] = "Select model";
-                dataTable.Rows.InsertAt(topRow, 0);
-                command.ExecuteNonQuery();
-
-                connection.Close();
-
-                return dataTable;
-            }
-        }
-
-        public DataTable GetAutoSeriesFromQuery(string autoModel)
-        {
-            using (connection)
-            {
-                SqlCommand command = new SqlCommand();
-
-                connection.Open();
-
-                command.CommandText = $"SELECT DISTINCT AutoSeries FROM AutosaloonTable " +
-                    $"WHERE AutoModel = '{autoModel}'";
-                command.Connection = connection;
-
-                SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
-                DataTable dataTable = new DataTable();
-                dataAdapter.Fill(dataTable);
-                DataRow topRow = dataTable.NewRow();
-                topRow[0] = "Select series";
-                dataTable.Rows.InsertAt(topRow, 0);
-                command.ExecuteNonQuery();
-
-                connection.Close();
-
-                return dataTable;
-            }
-        }
-
-        public DataTable GetCityLocationFromQuery(string autoModel, string autoSeries)
-        {
-            using (connection)
-            {
-                SqlCommand command = new SqlCommand();
-
-                connection.Open();
-
-                command.CommandText = $"SELECT DISTINCT CityLocation FROM AutosaloonTable " +
-                    $"WHERE AutoModel = '{autoModel}' AND AutoSeries = '{autoSeries}'";
-                command.Connection = connection;
-
-                SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
-                DataTable dataTable = new DataTable();
-                dataAdapter.Fill(dataTable);
-                DataRow topRow = dataTable.NewRow();
-                topRow[0] = "Select city";
+                topRow[0] = topRowName;
                 dataTable.Rows.InsertAt(topRow, 0);
                 command.ExecuteNonQuery();
 

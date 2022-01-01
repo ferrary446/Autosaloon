@@ -15,7 +15,10 @@ namespace Autosaloon
         private void AutoSearcher_Load(object sender, EventArgs e)
         {
             ConnectionDB connectionDB = new ConnectionDB();
-            brandComboBox.DataSource = connectionDB.GetAutoBrandsFromQuery();
+            brandComboBox.DataSource = connectionDB.GetSelectDistinctValueFromQuery(
+                "AutoBrand", 
+                "AutosaloonTable",
+                "Select brand");
             brandComboBox.DisplayMember = "AutoBrand";
 
             ConnectionDB maximumCountConnectionDB = new ConnectionDB();
@@ -51,11 +54,18 @@ namespace Autosaloon
             if (autoBrand != null)
             {
                 ConnectionDB connectionDB = new ConnectionDB();
-                modelComboBox.DataSource = connectionDB.GetAutoModelsFromQuery(autoBrand);
+                modelComboBox.DataSource = connectionDB.GetSelectDistinctValueFromQuery(
+                    "AutoModel",
+                    "AutosaloonTable",
+                    "Select model",
+                    $"WHERE AutoBrand = '{autoBrand}'");
                 modelComboBox.DisplayMember = "AutoModel";
 
                 ConnectionDB countConnectionDB = new ConnectionDB();
-                countProgressBar.Value = countConnectionDB.GetCountModelsByRange("AutoModel", "AutoBrand", autoBrand);
+                countProgressBar.Value = countConnectionDB.GetCountModelsByRange(
+                    "AutoModel", 
+                    "AutoBrand", 
+                    autoBrand);
 
                 if (countProgressBar.Value < countProgressBar.Maximum)
                 {
@@ -72,11 +82,18 @@ namespace Autosaloon
             if (autoModel != null)
             {
                 ConnectionDB connectionDB = new ConnectionDB();
-                seriesComboBox.DataSource = connectionDB.GetAutoSeriesFromQuery(autoModel);
+                seriesComboBox.DataSource = connectionDB.GetSelectDistinctValueFromQuery(
+                    "AutoSeries",
+                    "AutosaloonTable",
+                    "Select series",
+                    $"WHERE AutoModel = '{autoModel}'");
                 seriesComboBox.DisplayMember = "AutoSeries";
 
                 ConnectionDB countConnectionDB = new ConnectionDB();
-                countProgressBar.Value = countConnectionDB.GetCountModelsByRange("AutoSeries", "AutoModel", autoModel);
+                countProgressBar.Value = countConnectionDB.GetCountModelsByRange(
+                    "AutoSeries", 
+                    "AutoModel", 
+                    autoModel);
 
                 if (countProgressBar.Value < countProgressBar.Maximum)
                 {
@@ -96,11 +113,20 @@ namespace Autosaloon
             if (autoModel != null && autoSeries != null)
             {
                 ConnectionDB connectionDB = new ConnectionDB();
-                locationComboBox.DataSource =  connectionDB.GetCityLocationFromQuery(autoModel, autoSeries);
+                locationComboBox.DataSource =  connectionDB.GetSelectDistinctValueFromQuery(
+                    "CityLocation",
+                    "AutosaloonTable",
+                    "Select city",
+                    $"WHERE AutoModel = '{autoModel}'",
+                    $"AND AutoSeries = '{autoSeries}'");
                 locationComboBox.DisplayMember = "CityLocation";
 
                 ConnectionDB countConnectionDB = new ConnectionDB();
-                countProgressBar.Value = countConnectionDB.GetCountModelsByRange("CityLocation", "AutoModel", autoModel, $"and AutoSeries = '{autoSeries}'");
+                countProgressBar.Value = countConnectionDB.GetCountModelsByRange(
+                    "CityLocation", 
+                    "AutoModel", 
+                    autoModel, 
+                    $"and AutoSeries = '{autoSeries}'");
 
                 if (countProgressBar.Value < countProgressBar.Maximum)
                 {
