@@ -5,14 +5,17 @@ using System.Data.SqlClient;
 
 namespace Autosaloon
 {
+    // Class pro použiti databáze
     public class ConnectionDB
     {
-        private SqlConnection connection = new SqlConnection(
+        // Instalujeme připojení k databáze
+        private readonly SqlConnection connection = new SqlConnection(
             $"Data Source=.;" +
             $"Initial Catalog=AutosaloonDB;" +
             $"User ID={LoginData.adminID};" +
             $"Password={LoginData.adminPassword}"
             );
+        // Získávame celou tabulku z databáze
         public DataTable GetDataTableFromQuery(string tableName)
         {
             using (connection)
@@ -34,6 +37,7 @@ namespace Autosaloon
                 return dataTable;
             }
         }
+        // Získávame filtrovanou tabulku pro použití v comboboxu
         public DataTable GetSelectDistinctValueFromQuery(
             string selectParametr,
             string tableName,
@@ -66,7 +70,7 @@ namespace Autosaloon
                 return dataTable;
             }
         }
-
+        // Získávame množství všech aut skladem pro zobrazení v ProgressView
         public int GetCountModelsFromQuery()
         {
             using (connection)
@@ -88,10 +92,10 @@ namespace Autosaloon
                 return dataTable.Rows.Count;
             }
         }
-
+        // Získávame množství filtrovaných comboboxem aut skladem pro zobrazení v ProgressView
         public int GetCountModelsByRange(
-            string firstParametr, 
-            string secondParametr,
+            string selectParametr, 
+            string whereParametr,
             string valueForWhere,
             string? optionalParametr = null
             )
@@ -100,8 +104,8 @@ namespace Autosaloon
 
             connection.Open();
 
-            command.CommandText = $"SELECT {firstParametr} FROM AutosaloonTable " +
-                $"WHERE {secondParametr} = '{valueForWhere}'" +
+            command.CommandText = $"SELECT {selectParametr} FROM AutosaloonTable " +
+                $"WHERE {whereParametr} = '{valueForWhere}'" +
                 optionalParametr;
             command.Connection = connection;
 
@@ -114,7 +118,7 @@ namespace Autosaloon
 
             return dataTable.Rows.Count;
         }
-
+        // Funkce pro možnost přidat nové auto do tabulky
         public void InsertIntoAutosaloonTable(
             int autoID, 
             string autoBrand, 
@@ -142,7 +146,7 @@ namespace Autosaloon
                 connection.Close();
             }
         }
-
+        // Funkce pro možnost vymazat nové auto z tabulky
         public void RemoveFromAutosaloonTable(DataGridView dataGridView)
         {
             using (connection)
@@ -168,7 +172,7 @@ namespace Autosaloon
                 }
             }
         }
-
+        // Funkce pro možnost opravit udaje o existujícím aute v tabulce
         public void EditInAutosaloonTable(
             DataGridView dataGridView,
             int autoID,

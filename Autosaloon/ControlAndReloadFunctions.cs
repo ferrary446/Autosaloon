@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace Autosaloon
 {
+    // Interface pro povinne použití ty funkce
     public interface ControlAndReloadFunctions
     {
         bool TextBoxDataChecked();
