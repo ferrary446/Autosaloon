@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.rjButton1 = new CustomBox.RJControls.RJButton();
+            this.showButton = new CustomBox.RJControls.RJButton();
             this.brandComboBox = new CustomBox.RJControls.RJComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.modelComboBox = new CustomBox.RJControls.RJComboBox();
@@ -45,26 +45,27 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // rjButton1
+            // showButton
             // 
-            this.rjButton1.BackColor = System.Drawing.Color.Gold;
-            this.rjButton1.BackgroundColor = System.Drawing.Color.Gold;
-            this.rjButton1.BorderColor = System.Drawing.Color.Black;
-            this.rjButton1.BorderRadius = 20;
-            this.rjButton1.BorderSize = 1;
-            this.rjButton1.FlatAppearance.BorderSize = 0;
-            this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton1.Font = new System.Drawing.Font("Impact", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.rjButton1.ForeColor = System.Drawing.Color.Black;
-            this.rjButton1.Location = new System.Drawing.Point(690, 394);
-            this.rjButton1.MaximumSize = new System.Drawing.Size(143, 37);
-            this.rjButton1.MinimumSize = new System.Drawing.Size(143, 37);
-            this.rjButton1.Name = "rjButton1";
-            this.rjButton1.Size = new System.Drawing.Size(143, 37);
-            this.rjButton1.TabIndex = 0;
-            this.rjButton1.Text = "Show";
-            this.rjButton1.TextColor = System.Drawing.Color.Black;
-            this.rjButton1.UseVisualStyleBackColor = false;
+            this.showButton.BackColor = System.Drawing.Color.Gold;
+            this.showButton.BackgroundColor = System.Drawing.Color.Gold;
+            this.showButton.BorderColor = System.Drawing.Color.Black;
+            this.showButton.BorderRadius = 20;
+            this.showButton.BorderSize = 1;
+            this.showButton.FlatAppearance.BorderSize = 0;
+            this.showButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.showButton.Font = new System.Drawing.Font("Impact", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.showButton.ForeColor = System.Drawing.Color.Black;
+            this.showButton.Location = new System.Drawing.Point(690, 394);
+            this.showButton.MaximumSize = new System.Drawing.Size(143, 37);
+            this.showButton.MinimumSize = new System.Drawing.Size(143, 37);
+            this.showButton.Name = "showButton";
+            this.showButton.Size = new System.Drawing.Size(143, 37);
+            this.showButton.TabIndex = 0;
+            this.showButton.Text = "Show";
+            this.showButton.TextColor = System.Drawing.Color.Black;
+            this.showButton.UseVisualStyleBackColor = false;
+            this.showButton.Click += new System.EventHandler(this.ShowButton_Click);
             // 
             // brandComboBox
             // 
@@ -192,6 +193,7 @@
             this.locationComboBox.Size = new System.Drawing.Size(341, 54);
             this.locationComboBox.TabIndex = 1;
             this.locationComboBox.Texts = "";
+            this.locationComboBox.OnSelectedIndexChanged += new System.EventHandler(this.LocationComboBox_OnSelectedIndexChanged);
             // 
             // label4
             // 
@@ -323,7 +325,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.modelComboBox);
             this.Controls.Add(this.brandComboBox);
-            this.Controls.Add(this.rjButton1);
+            this.Controls.Add(this.showButton);
             this.Font = new System.Drawing.Font("Century", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
@@ -341,7 +343,7 @@
 
         #endregion
 
-        private CustomBox.RJControls.RJButton rjButton1;
+        private CustomBox.RJControls.RJButton showButton;
         private CustomBox.RJControls.RJComboBox brandComboBox;
         private System.Windows.Forms.Label label1;
         private CustomBox.RJControls.RJComboBox modelComboBox;

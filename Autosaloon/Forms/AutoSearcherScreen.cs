@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Autosaloon.Forms;
+using System;
 using System.Data;
 using System.Windows.Forms;
 
@@ -71,6 +72,8 @@ namespace Autosaloon
                 {
                     countProgressBar.ForeBackColor = System.Drawing.Color.Gold;
                 }
+
+                Result.autoBrand = autoBrand;
             }
         }
         // Obnova comboboxu AutoSeries při vyberu modelu v comboboxu AutoModel
@@ -99,6 +102,8 @@ namespace Autosaloon
                 {
                     countProgressBar.ForeBackColor = System.Drawing.Color.Gold;
                 }
+
+                Result.autoModel = autoModel;
             }
         }
         /* 
@@ -135,6 +140,58 @@ namespace Autosaloon
                 {
                     countProgressBar.ForeBackColor = System.Drawing.Color.Gold;
                 }
+
+                Result.autoSeries = autoSeries;
+            }
+        }
+
+        private void LocationComboBox_OnSelectedIndexChanged(object sender, EventArgs e)
+        {
+            DataRowView selectedModel = ((DataRowView)modelComboBox.SelectedItem);
+            string? autoModel = selectedModel.Row["AutoModel"].ToString();
+
+            DataRowView selectedSeries = ((DataRowView)seriesComboBox.SelectedItem);
+            string? autoSeries = selectedSeries.Row["AutoSeries"].ToString();
+
+            DataRowView selectedLocation = ((DataRowView)locationComboBox.SelectedItem);
+            string? cityLocation = selectedLocation.Row["CityLocation"].ToString();
+
+            if (autoModel != null && 
+                autoSeries != null &&
+                cityLocation != null)
+            {
+                ConnectionDB countConnectionDB = new ConnectionDB();
+                countProgressBar.Value = countConnectionDB.GetCountModelsByRange(
+                    "CityLocation",
+                    "AutoModel",
+                    autoModel,
+                    $"and AutoSeries = '{autoSeries}' " +
+                    $"and CityLocation = '{cityLocation}'");
+
+                if (countProgressBar.Value < countProgressBar.Maximum)
+                {
+                    countProgressBar.ForeBackColor = System.Drawing.Color.Gold;
+                }
+
+                Result.cityLocation = cityLocation;
+                Result.count = countProgressBar.Value;
+            }
+        }
+
+        private void ShowButton_Click(object sender, EventArgs e)
+        {
+            if (brandComboBox.SelectedIndex != 0 &&
+                modelComboBox.SelectedIndex != 0 &&
+                seriesComboBox.SelectedIndex != 0 &&
+                locationComboBox.SelectedIndex != 0)
+            {
+                ResultScreen resultScreen = new ResultScreen();
+                resultScreen.Show();
+                Hide();
+            }
+            else
+            {
+                MessageBox.Show("Please select all positions");
             }
         }
     }

@@ -39,6 +39,8 @@
             this.autoSeriesText = new System.Windows.Forms.Label();
             this.cityLocationText = new System.Windows.Forms.Label();
             this.countText = new System.Windows.Forms.Label();
+            this.closeButtonInResult = new CustomBox.RJControls.RJButton();
+            this.backResultButton = new CustomBox.RJControls.RJButton();
             ((System.ComponentModel.ISupportInitialize)(this.autoImage)).BeginInit();
             this.SuspendLayout();
             // 
@@ -124,7 +126,7 @@
             // 
             // autoBrandText
             // 
-            this.autoBrandText.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.autoBrandText.Font = new System.Drawing.Font("Impact", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.autoBrandText.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.autoBrandText.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.autoBrandText.Location = new System.Drawing.Point(575, 41);
@@ -134,11 +136,11 @@
             this.autoBrandText.Size = new System.Drawing.Size(105, 28);
             this.autoBrandText.TabIndex = 9;
             this.autoBrandText.Text = "Audi";
-            this.autoBrandText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.autoBrandText.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // autoModelText
             // 
-            this.autoModelText.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.autoModelText.Font = new System.Drawing.Font("Impact", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.autoModelText.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.autoModelText.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.autoModelText.Location = new System.Drawing.Point(575, 83);
@@ -148,11 +150,11 @@
             this.autoModelText.Size = new System.Drawing.Size(105, 28);
             this.autoModelText.TabIndex = 10;
             this.autoModelText.Text = "A4";
-            this.autoModelText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.autoModelText.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // autoSeriesText
             // 
-            this.autoSeriesText.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.autoSeriesText.Font = new System.Drawing.Font("Impact", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.autoSeriesText.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.autoSeriesText.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.autoSeriesText.Location = new System.Drawing.Point(575, 125);
@@ -162,25 +164,25 @@
             this.autoSeriesText.Size = new System.Drawing.Size(105, 28);
             this.autoSeriesText.TabIndex = 11;
             this.autoSeriesText.Text = "S-Line";
-            this.autoSeriesText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.autoSeriesText.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // cityLocationText
             // 
-            this.cityLocationText.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cityLocationText.Font = new System.Drawing.Font("Impact", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cityLocationText.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.cityLocationText.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.cityLocationText.Location = new System.Drawing.Point(575, 170);
-            this.cityLocationText.MaximumSize = new System.Drawing.Size(105, 28);
+            this.cityLocationText.MaximumSize = new System.Drawing.Size(200, 28);
             this.cityLocationText.MinimumSize = new System.Drawing.Size(105, 28);
             this.cityLocationText.Name = "cityLocationText";
-            this.cityLocationText.Size = new System.Drawing.Size(105, 28);
+            this.cityLocationText.Size = new System.Drawing.Size(145, 28);
             this.cityLocationText.TabIndex = 12;
-            this.cityLocationText.Text = "Plzen";
-            this.cityLocationText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.cityLocationText.Text = "Ceske budejovice";
+            this.cityLocationText.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // countText
             // 
-            this.countText.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.countText.Font = new System.Drawing.Font("Impact", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.countText.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.countText.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.countText.Location = new System.Drawing.Point(575, 212);
@@ -190,7 +192,51 @@
             this.countText.Size = new System.Drawing.Size(105, 28);
             this.countText.TabIndex = 13;
             this.countText.Text = "1";
-            this.countText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.countText.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // closeButtonInResult
+            // 
+            this.closeButtonInResult.BackColor = System.Drawing.Color.Gold;
+            this.closeButtonInResult.BackgroundColor = System.Drawing.Color.Gold;
+            this.closeButtonInResult.BorderColor = System.Drawing.Color.Black;
+            this.closeButtonInResult.BorderRadius = 15;
+            this.closeButtonInResult.BorderSize = 1;
+            this.closeButtonInResult.FlatAppearance.BorderSize = 0;
+            this.closeButtonInResult.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.closeButtonInResult.Font = new System.Drawing.Font("Impact", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.closeButtonInResult.ForeColor = System.Drawing.Color.Black;
+            this.closeButtonInResult.Location = new System.Drawing.Point(642, 264);
+            this.closeButtonInResult.MaximumSize = new System.Drawing.Size(78, 27);
+            this.closeButtonInResult.MinimumSize = new System.Drawing.Size(78, 27);
+            this.closeButtonInResult.Name = "closeButtonInResult";
+            this.closeButtonInResult.Size = new System.Drawing.Size(78, 27);
+            this.closeButtonInResult.TabIndex = 14;
+            this.closeButtonInResult.Text = "Close";
+            this.closeButtonInResult.TextColor = System.Drawing.Color.Black;
+            this.closeButtonInResult.UseVisualStyleBackColor = false;
+            this.closeButtonInResult.Click += new System.EventHandler(this.CloseButtonInResult_Click);
+            // 
+            // backResultButton
+            // 
+            this.backResultButton.BackColor = System.Drawing.Color.Gold;
+            this.backResultButton.BackgroundColor = System.Drawing.Color.Gold;
+            this.backResultButton.BorderColor = System.Drawing.Color.Black;
+            this.backResultButton.BorderRadius = 15;
+            this.backResultButton.BorderSize = 1;
+            this.backResultButton.FlatAppearance.BorderSize = 0;
+            this.backResultButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.backResultButton.Font = new System.Drawing.Font("Impact", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.backResultButton.ForeColor = System.Drawing.Color.Black;
+            this.backResultButton.Location = new System.Drawing.Point(642, 12);
+            this.backResultButton.MaximumSize = new System.Drawing.Size(78, 27);
+            this.backResultButton.MinimumSize = new System.Drawing.Size(78, 27);
+            this.backResultButton.Name = "backResultButton";
+            this.backResultButton.Size = new System.Drawing.Size(78, 27);
+            this.backResultButton.TabIndex = 15;
+            this.backResultButton.Text = "Back";
+            this.backResultButton.TextColor = System.Drawing.Color.Black;
+            this.backResultButton.UseVisualStyleBackColor = false;
+            this.backResultButton.Click += new System.EventHandler(this.BackResultButton_Click);
             // 
             // ResultScreen
             // 
@@ -198,6 +244,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.ClientSize = new System.Drawing.Size(732, 303);
+            this.Controls.Add(this.backResultButton);
+            this.Controls.Add(this.closeButtonInResult);
             this.Controls.Add(this.countText);
             this.Controls.Add(this.cityLocationText);
             this.Controls.Add(this.autoSeriesText);
@@ -215,6 +263,7 @@
             this.Name = "ResultScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ResultScreen";
+            this.Load += new System.EventHandler(this.ResultScreen_Load);
             ((System.ComponentModel.ISupportInitialize)(this.autoImage)).EndInit();
             this.ResumeLayout(false);
 
@@ -233,5 +282,7 @@
         private System.Windows.Forms.Label autoSeriesText;
         private System.Windows.Forms.Label cityLocationText;
         private System.Windows.Forms.Label countText;
+        private CustomBox.RJControls.RJButton closeButtonInResult;
+        private CustomBox.RJControls.RJButton backResultButton;
     }
 }
