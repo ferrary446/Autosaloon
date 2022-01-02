@@ -145,7 +145,11 @@ namespace Autosaloon
                 Result.autoSeries = autoSeries;
             }
         }
-
+        /* 
+        Obnova množství aut při vyberu modelu v comboboxu AutoModel,
+        serie v comboboxu AutoSeries,
+        a cityLocation v comboboxu CityLocation
+        */
         private void LocationComboBox_OnSelectedIndexChanged(object sender, EventArgs e)
         {
             DataRowView selectedModel = ((DataRowView)modelComboBox.SelectedItem);
@@ -178,7 +182,7 @@ namespace Autosaloon
                 Result.count = countProgressBar.Value;
             }
         }
-
+        // Volaní okna Result
         private void ShowButton_Click(object sender, EventArgs e)
         {
             if (brandComboBox.SelectedIndex != 0 &&
