@@ -8,9 +8,10 @@ namespace Autosaloon.Database
     // Class pro použiti databáze
     public class ConnectionDB
     {
-        private static string connectionString = ConnectionString.connectionString;
         // Instalujeme připojení k databáze
-        private SqlConnection connection = new SqlConnection(connectionString);
+        private SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;" +
+        @"AttachDbFilename=C:\Users\ponom\Desktop\Autosaloon_Ilya_Yushkov\Autosaloon\Autosaloon\Database\Database.mdf;" +
+        "Integrated Security=True");
         // Získávame celou tabulku z databáze
         public DataTable GetDataTableFromQuery(string tableName)
         {
