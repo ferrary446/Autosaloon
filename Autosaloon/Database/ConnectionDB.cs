@@ -3,18 +3,14 @@ using System.Windows.Forms;
 using System.Data;
 using System.Data.SqlClient;
 
-namespace Autosaloon
+namespace Autosaloon.Database
 {
     // Class pro použiti databáze
     public class ConnectionDB
     {
+        private static string connectionString = ConnectionString.connectionString;
         // Instalujeme připojení k databáze
-        private readonly SqlConnection connection = new SqlConnection(
-            $"Data Source=.;" +
-            $"Initial Catalog=AutosaloonDB;" +
-            $"User ID={LoginData.adminID};" +
-            $"Password={LoginData.adminPassword}"
-            );
+        private SqlConnection connection = new SqlConnection(connectionString);
         // Získávame celou tabulku z databáze
         public DataTable GetDataTableFromQuery(string tableName)
         {
