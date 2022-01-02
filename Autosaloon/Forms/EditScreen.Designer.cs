@@ -47,11 +47,11 @@
             // 
             this.label1.Font = new System.Drawing.Font("Impact", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(12, 9);
-            this.label1.MaximumSize = new System.Drawing.Size(257, 40);
-            this.label1.MinimumSize = new System.Drawing.Size(257, 40);
+            this.label1.Location = new System.Drawing.Point(14, 12);
+            this.label1.MaximumSize = new System.Drawing.Size(294, 53);
+            this.label1.MinimumSize = new System.Drawing.Size(294, 53);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(257, 40);
+            this.label1.Size = new System.Drawing.Size(294, 53);
             this.label1.TabIndex = 8;
             this.label1.Text = "Edit menu:";
             // 
@@ -64,17 +64,17 @@
             this.cityLocationTextBoxEdit.BorderSize = 2;
             this.cityLocationTextBoxEdit.Font = new System.Drawing.Font("Impact", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cityLocationTextBoxEdit.ForeColor = System.Drawing.Color.White;
-            this.cityLocationTextBoxEdit.Location = new System.Drawing.Point(467, 136);
-            this.cityLocationTextBoxEdit.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.cityLocationTextBoxEdit.MaximumSize = new System.Drawing.Size(161, 29);
-            this.cityLocationTextBoxEdit.MinimumSize = new System.Drawing.Size(161, 29);
+            this.cityLocationTextBoxEdit.Location = new System.Drawing.Point(534, 181);
+            this.cityLocationTextBoxEdit.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.cityLocationTextBoxEdit.MaximumSize = new System.Drawing.Size(184, 39);
+            this.cityLocationTextBoxEdit.MinimumSize = new System.Drawing.Size(184, 39);
             this.cityLocationTextBoxEdit.Multiline = false;
             this.cityLocationTextBoxEdit.Name = "cityLocationTextBoxEdit";
-            this.cityLocationTextBoxEdit.Padding = new System.Windows.Forms.Padding(9, 5, 9, 5);
+            this.cityLocationTextBoxEdit.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.cityLocationTextBoxEdit.PasswordChar = false;
             this.cityLocationTextBoxEdit.PlaceholderColor = System.Drawing.Color.White;
             this.cityLocationTextBoxEdit.PlaceholderText = "";
-            this.cityLocationTextBoxEdit.Size = new System.Drawing.Size(161, 29);
+            this.cityLocationTextBoxEdit.Size = new System.Drawing.Size(184, 39);
             this.cityLocationTextBoxEdit.TabIndex = 31;
             this.cityLocationTextBoxEdit.Texts = "";
             this.cityLocationTextBoxEdit.UnderlinedStyle = true;
@@ -88,17 +88,17 @@
             this.autoSeriesTextBoxEdit.BorderSize = 2;
             this.autoSeriesTextBoxEdit.Font = new System.Drawing.Font("Impact", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.autoSeriesTextBoxEdit.ForeColor = System.Drawing.Color.White;
-            this.autoSeriesTextBoxEdit.Location = new System.Drawing.Point(173, 134);
-            this.autoSeriesTextBoxEdit.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.autoSeriesTextBoxEdit.MaximumSize = new System.Drawing.Size(161, 29);
-            this.autoSeriesTextBoxEdit.MinimumSize = new System.Drawing.Size(161, 29);
+            this.autoSeriesTextBoxEdit.Location = new System.Drawing.Point(198, 179);
+            this.autoSeriesTextBoxEdit.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.autoSeriesTextBoxEdit.MaximumSize = new System.Drawing.Size(184, 39);
+            this.autoSeriesTextBoxEdit.MinimumSize = new System.Drawing.Size(184, 39);
             this.autoSeriesTextBoxEdit.Multiline = false;
             this.autoSeriesTextBoxEdit.Name = "autoSeriesTextBoxEdit";
-            this.autoSeriesTextBoxEdit.Padding = new System.Windows.Forms.Padding(9, 5, 9, 5);
+            this.autoSeriesTextBoxEdit.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.autoSeriesTextBoxEdit.PasswordChar = false;
             this.autoSeriesTextBoxEdit.PlaceholderColor = System.Drawing.Color.White;
             this.autoSeriesTextBoxEdit.PlaceholderText = "";
-            this.autoSeriesTextBoxEdit.Size = new System.Drawing.Size(161, 29);
+            this.autoSeriesTextBoxEdit.Size = new System.Drawing.Size(184, 39);
             this.autoSeriesTextBoxEdit.TabIndex = 30;
             this.autoSeriesTextBoxEdit.Texts = "";
             this.autoSeriesTextBoxEdit.UnderlinedStyle = true;
@@ -112,17 +112,17 @@
             this.autoModelTextBoxEdit.BorderSize = 2;
             this.autoModelTextBoxEdit.Font = new System.Drawing.Font("Impact", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.autoModelTextBoxEdit.ForeColor = System.Drawing.Color.White;
-            this.autoModelTextBoxEdit.Location = new System.Drawing.Point(692, 66);
-            this.autoModelTextBoxEdit.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.autoModelTextBoxEdit.MaximumSize = new System.Drawing.Size(161, 29);
-            this.autoModelTextBoxEdit.MinimumSize = new System.Drawing.Size(161, 29);
+            this.autoModelTextBoxEdit.Location = new System.Drawing.Point(791, 88);
+            this.autoModelTextBoxEdit.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.autoModelTextBoxEdit.MaximumSize = new System.Drawing.Size(184, 39);
+            this.autoModelTextBoxEdit.MinimumSize = new System.Drawing.Size(184, 39);
             this.autoModelTextBoxEdit.Multiline = false;
             this.autoModelTextBoxEdit.Name = "autoModelTextBoxEdit";
-            this.autoModelTextBoxEdit.Padding = new System.Windows.Forms.Padding(9, 5, 9, 5);
+            this.autoModelTextBoxEdit.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.autoModelTextBoxEdit.PasswordChar = false;
             this.autoModelTextBoxEdit.PlaceholderColor = System.Drawing.Color.White;
             this.autoModelTextBoxEdit.PlaceholderText = "";
-            this.autoModelTextBoxEdit.Size = new System.Drawing.Size(161, 29);
+            this.autoModelTextBoxEdit.Size = new System.Drawing.Size(184, 39);
             this.autoModelTextBoxEdit.TabIndex = 29;
             this.autoModelTextBoxEdit.Texts = "";
             this.autoModelTextBoxEdit.UnderlinedStyle = true;
@@ -136,17 +136,17 @@
             this.autoBrandTextBoxEdit.BorderSize = 2;
             this.autoBrandTextBoxEdit.Font = new System.Drawing.Font("Impact", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.autoBrandTextBoxEdit.ForeColor = System.Drawing.Color.White;
-            this.autoBrandTextBoxEdit.Location = new System.Drawing.Point(411, 66);
-            this.autoBrandTextBoxEdit.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.autoBrandTextBoxEdit.MaximumSize = new System.Drawing.Size(161, 29);
-            this.autoBrandTextBoxEdit.MinimumSize = new System.Drawing.Size(161, 29);
+            this.autoBrandTextBoxEdit.Location = new System.Drawing.Point(470, 88);
+            this.autoBrandTextBoxEdit.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.autoBrandTextBoxEdit.MaximumSize = new System.Drawing.Size(184, 39);
+            this.autoBrandTextBoxEdit.MinimumSize = new System.Drawing.Size(184, 39);
             this.autoBrandTextBoxEdit.Multiline = false;
             this.autoBrandTextBoxEdit.Name = "autoBrandTextBoxEdit";
-            this.autoBrandTextBoxEdit.Padding = new System.Windows.Forms.Padding(9, 5, 9, 5);
+            this.autoBrandTextBoxEdit.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.autoBrandTextBoxEdit.PasswordChar = false;
             this.autoBrandTextBoxEdit.PlaceholderColor = System.Drawing.Color.White;
             this.autoBrandTextBoxEdit.PlaceholderText = "";
-            this.autoBrandTextBoxEdit.Size = new System.Drawing.Size(161, 29);
+            this.autoBrandTextBoxEdit.Size = new System.Drawing.Size(184, 39);
             this.autoBrandTextBoxEdit.TabIndex = 28;
             this.autoBrandTextBoxEdit.Texts = "";
             this.autoBrandTextBoxEdit.UnderlinedStyle = true;
@@ -160,78 +160,78 @@
             this.autoIDTextBoxEdit.BorderSize = 2;
             this.autoIDTextBoxEdit.Font = new System.Drawing.Font("Impact", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.autoIDTextBoxEdit.ForeColor = System.Drawing.Color.White;
-            this.autoIDTextBoxEdit.Location = new System.Drawing.Point(130, 66);
-            this.autoIDTextBoxEdit.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.autoIDTextBoxEdit.MaximumSize = new System.Drawing.Size(161, 29);
-            this.autoIDTextBoxEdit.MinimumSize = new System.Drawing.Size(161, 29);
+            this.autoIDTextBoxEdit.Location = new System.Drawing.Point(149, 88);
+            this.autoIDTextBoxEdit.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.autoIDTextBoxEdit.MaximumSize = new System.Drawing.Size(184, 39);
+            this.autoIDTextBoxEdit.MinimumSize = new System.Drawing.Size(184, 39);
             this.autoIDTextBoxEdit.Multiline = false;
             this.autoIDTextBoxEdit.Name = "autoIDTextBoxEdit";
-            this.autoIDTextBoxEdit.Padding = new System.Windows.Forms.Padding(9, 5, 9, 5);
+            this.autoIDTextBoxEdit.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.autoIDTextBoxEdit.PasswordChar = false;
             this.autoIDTextBoxEdit.PlaceholderColor = System.Drawing.Color.White;
             this.autoIDTextBoxEdit.PlaceholderText = "";
-            this.autoIDTextBoxEdit.Size = new System.Drawing.Size(161, 29);
+            this.autoIDTextBoxEdit.Size = new System.Drawing.Size(184, 39);
             this.autoIDTextBoxEdit.TabIndex = 27;
             this.autoIDTextBoxEdit.Texts = "";
             this.autoIDTextBoxEdit.UnderlinedStyle = true;
             // 
             // label7
             // 
-            this.label7.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label7.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label7.Location = new System.Drawing.Point(341, 136);
-            this.label7.MaximumSize = new System.Drawing.Size(119, 27);
-            this.label7.MinimumSize = new System.Drawing.Size(119, 27);
+            this.label7.Location = new System.Drawing.Point(390, 181);
+            this.label7.MaximumSize = new System.Drawing.Size(136, 36);
+            this.label7.MinimumSize = new System.Drawing.Size(136, 36);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(119, 27);
+            this.label7.Size = new System.Drawing.Size(136, 36);
             this.label7.TabIndex = 26;
             this.label7.Text = "City Location:";
             // 
             // label6
             // 
-            this.label6.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label6.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label6.Location = new System.Drawing.Point(60, 136);
-            this.label6.MaximumSize = new System.Drawing.Size(106, 27);
-            this.label6.MinimumSize = new System.Drawing.Size(106, 27);
+            this.label6.Location = new System.Drawing.Point(69, 181);
+            this.label6.MaximumSize = new System.Drawing.Size(121, 36);
+            this.label6.MinimumSize = new System.Drawing.Size(121, 36);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(106, 27);
+            this.label6.Size = new System.Drawing.Size(121, 36);
             this.label6.TabIndex = 25;
             this.label6.Text = "Auto Series:";
             // 
             // label5
             // 
-            this.label5.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label5.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(579, 70);
-            this.label5.MaximumSize = new System.Drawing.Size(106, 27);
-            this.label5.MinimumSize = new System.Drawing.Size(106, 27);
+            this.label5.Location = new System.Drawing.Point(662, 93);
+            this.label5.MaximumSize = new System.Drawing.Size(121, 36);
+            this.label5.MinimumSize = new System.Drawing.Size(121, 36);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(106, 27);
+            this.label5.Size = new System.Drawing.Size(121, 36);
             this.label5.TabIndex = 24;
             this.label5.Text = "Auto Model:";
             // 
             // label3
             // 
-            this.label3.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(60, 70);
-            this.label3.MaximumSize = new System.Drawing.Size(106, 27);
-            this.label3.MinimumSize = new System.Drawing.Size(106, 27);
+            this.label3.Location = new System.Drawing.Point(69, 93);
+            this.label3.MaximumSize = new System.Drawing.Size(121, 36);
+            this.label3.MinimumSize = new System.Drawing.Size(121, 36);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(106, 27);
+            this.label3.Size = new System.Drawing.Size(121, 36);
             this.label3.TabIndex = 23;
             this.label3.Text = "Auto ID:";
             // 
             // label2
             // 
-            this.label2.Font = new System.Drawing.Font("Impact", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(298, 68);
-            this.label2.MaximumSize = new System.Drawing.Size(106, 27);
-            this.label2.MinimumSize = new System.Drawing.Size(106, 27);
+            this.label2.Location = new System.Drawing.Point(341, 91);
+            this.label2.MaximumSize = new System.Drawing.Size(121, 36);
+            this.label2.MinimumSize = new System.Drawing.Size(121, 36);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(106, 27);
+            this.label2.Size = new System.Drawing.Size(121, 36);
             this.label2.TabIndex = 22;
             this.label2.Text = "Auto Brand:";
             // 
@@ -246,11 +246,12 @@
             this.editCarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.editCarButton.Font = new System.Drawing.Font("Impact", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.editCarButton.ForeColor = System.Drawing.Color.Black;
-            this.editCarButton.Location = new System.Drawing.Point(222, 201);
-            this.editCarButton.MaximumSize = new System.Drawing.Size(112, 34);
-            this.editCarButton.MinimumSize = new System.Drawing.Size(112, 34);
+            this.editCarButton.Location = new System.Drawing.Point(254, 268);
+            this.editCarButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.editCarButton.MaximumSize = new System.Drawing.Size(128, 45);
+            this.editCarButton.MinimumSize = new System.Drawing.Size(128, 45);
             this.editCarButton.Name = "editCarButton";
-            this.editCarButton.Size = new System.Drawing.Size(112, 34);
+            this.editCarButton.Size = new System.Drawing.Size(128, 45);
             this.editCarButton.TabIndex = 32;
             this.editCarButton.Text = "Edit";
             this.editCarButton.TextColor = System.Drawing.Color.Black;
@@ -268,11 +269,12 @@
             this.cancelEditButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cancelEditButton.Font = new System.Drawing.Font("Impact", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cancelEditButton.ForeColor = System.Drawing.Color.Black;
-            this.cancelEditButton.Location = new System.Drawing.Point(467, 201);
-            this.cancelEditButton.MaximumSize = new System.Drawing.Size(112, 34);
-            this.cancelEditButton.MinimumSize = new System.Drawing.Size(112, 34);
+            this.cancelEditButton.Location = new System.Drawing.Point(534, 268);
+            this.cancelEditButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cancelEditButton.MaximumSize = new System.Drawing.Size(128, 45);
+            this.cancelEditButton.MinimumSize = new System.Drawing.Size(128, 45);
             this.cancelEditButton.Name = "cancelEditButton";
-            this.cancelEditButton.Size = new System.Drawing.Size(112, 34);
+            this.cancelEditButton.Size = new System.Drawing.Size(128, 45);
             this.cancelEditButton.TabIndex = 33;
             this.cancelEditButton.Text = "Cancel";
             this.cancelEditButton.TextColor = System.Drawing.Color.Black;
@@ -281,10 +283,10 @@
             // 
             // EditScreen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.ClientSize = new System.Drawing.Size(889, 257);
+            this.ClientSize = new System.Drawing.Size(1016, 343);
             this.Controls.Add(this.cancelEditButton);
             this.Controls.Add(this.editCarButton);
             this.Controls.Add(this.cityLocationTextBoxEdit);
@@ -299,8 +301,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MaximumSize = new System.Drawing.Size(889, 257);
-            this.MinimumSize = new System.Drawing.Size(889, 257);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.MaximumSize = new System.Drawing.Size(1016, 343);
+            this.MinimumSize = new System.Drawing.Size(1016, 343);
             this.Name = "EditScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EditScreen";
