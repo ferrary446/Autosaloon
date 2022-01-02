@@ -47,7 +47,7 @@
             // autoImage
             // 
             this.autoImage.BackColor = System.Drawing.Color.Gold;
-            this.autoImage.Image = global::Autosaloon.Properties.Resources.AudiA4;
+            this.autoImage.Image = global::Autosaloon.Properties.Resources.logo;
             this.autoImage.Location = new System.Drawing.Point(0, -2);
             this.autoImage.MaximumSize = new System.Drawing.Size(406, 307);
             this.autoImage.MinimumSize = new System.Drawing.Size(406, 307);

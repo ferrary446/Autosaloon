@@ -237,7 +237,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Gold;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox1.Image = global::Autosaloon.Properties.Resources.dealership_icon_21;
+            this.pictureBox1.Image = global::Autosaloon.Properties.Resources.logo;
             this.pictureBox1.Location = new System.Drawing.Point(-1, -1);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.MaximumSize = new System.Drawing.Size(413, 394);
